@@ -1,0 +1,10 @@
+<div class='contain'>
+  <h1>Polls that you have created.</h1>
+  <h3>Click a poll to edit or see results. {{poll?.title}}</h3>
+
+  <app-singlepoll
+  [poll]='poll'
+  *ngFor="let poll of polls"
+  (click)="onClic(poll)">
+  </app-singlepoll>
+</div>

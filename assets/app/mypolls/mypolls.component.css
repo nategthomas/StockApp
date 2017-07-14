@@ -1,0 +1,29 @@
+.chart-container {
+  height: 450px;
+  width: 450px;
+}
+.poll-container {
+  padding: 20px;
+  background-color: #eee;
+  margin: 0px;
+}
+.options {
+  font-size: 1.3em;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+button {
+  width: 100%;
+  margin: 4px;
+}
+
+select {
+  width: 100%;
+  margin: 4px;
+}
+
+.dropdown {
+  margin-left: 0px;
+  padding-left: 0px;
+}

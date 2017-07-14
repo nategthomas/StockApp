@@ -1,0 +1,27 @@
+<div class="poll-container row">
+  <div class="options col-sm-4">
+    <div>{{poll?.title}}</div>
+<form>
+  <div>
+    <select #selected class="dropdown">
+      <option
+      *ngFor="let option of poll?.options; let i = index"
+      [selected]='option'
+      >{{option}}
+    </option>
+  </select>
+  <button
+  type="button"
+  class="btn btn-primary dropdown"
+  (click)="onclick(selected.value)"
+  >Submit
+  </button>
+
+  </div>
+</form>
+  </div>
+  <div class="chart-container col-sm-8">
+    <chart #c [type]="type" [data]="data" [options]="options"></chart>
+    <button type="button" class="btn btn-danger" (click)="onDelete()" >Delete Poll</button>
+  </div>
+</div>
