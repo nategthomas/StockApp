@@ -26,6 +26,115 @@ router.get('/', function(req, res) {
 })
 
 
+router.patch('/vote', function(req, res) {
+  var decoded = jwt.decode(req.query.token);
+  Poll.findById(req.body.pollid, function(err, poll) {
+    if (err) {
+      return res.status(500).json({
+        title: "poll not found",
+        error: err
+      })
+    }
+    if (!poll) {
+      return res.status(500).json({
+        title: "poll not found",
+        error: err
+      })
+    }
+    if (poll.voters.indexOf(decoded.user._id) !== -1) {
+      return res.status(500).json({
+        title: "User can only vote once",
+        error: {message: "Only one submission"}
+      })
+    }
+    var index = req.query.index;
+    var votes = poll.votes[index];
+    poll.votes[index] = votes + 1;
+    poll.markModified('votes');
+    poll.voters.push(decoded.user._id);
+    poll.markModified('voters');
+    poll.save(function(err, data) {
+      if (err) {
+        return res.status(500).json({
+          title: "poll not found",
+          error: err
+        })
+      }
+      res.status(201).json({
+        message: 'vote incremented',
+        obj: data
+      })
+    });
+
+  })
+})
+
+
+router.post('/custom', function(req, res) {
+  var decoded = jwt.decode(req.query.token);
+  Poll.findById(req.body.pollid, function(err, poll) {
+    if (err) {
+      return res.status(500).json({
+        title: "poll not found",
+        error: err
+      })
+    }
+    if (!poll) {
+      return res.status(500).json({
+        title: "poll not found",
+        error: err
+      })
+    }
+    if (poll.voters.indexOf(decoded.user._id) !== -1) {
+      return res.status(500).json({
+        title: "User can only vote once",
+        error: {message: "Only one submission"}
+      })
+    }
+    var custom = req.query.custom;
+    poll.options.push(req.query.custom);
+    poll.votes.push(1);
+    poll.voters.push(decoded.user._id);
+    poll.markModified('options');
+    poll.markModified('votes');
+    poll.markModified('voters');
+    poll.save(function(err, data) {
+      if (err) {
+        return res.status(500).json({
+          title: "poll not found",
+          error: err
+        })
+      }
+      res.status(201).json({
+        message: 'vote incremented',
+        obj: data
+      })
+    })
+  })
+})
+
+
+router.get('/mypoll', function(req, res) {
+  Poll.findById(req.query.id, function(err, poll) {
+    if (err) {
+      return res.status(500).json({
+        title: "poll not found",
+        error: err
+      })
+    }
+    if (!poll) {
+      return res.status(500).json({
+        title: "poll not found",
+        error: err
+      })
+    }
+    res.status(200).json({
+      message: "poll found",
+      obj: poll
+    })
+  })
+})
+
 
 router.use('/', function(req, res, next) {
   jwt.verify(req.query.token, 'secret', function(err, decoded) {
@@ -38,6 +147,8 @@ router.use('/', function(req, res, next) {
     next();
   })
 })
+
+
 
 router.post('/', function(req, res, next) {
   var decoded = jwt.decode(req.query.token);
@@ -123,70 +234,6 @@ router.get('/mypolls', function(req, res) {
   })
 })
 
-router.get('/mypoll', function(req, res) {
-  Poll.findById(req.query.id, function(err, poll) {
-    if (err) {
-      return res.status(500).json({
-        title: "poll not found",
-        error: err
-      })
-    }
-    if (!poll) {
-      return res.status(500).json({
-        title: "poll not found",
-        error: err
-      })
-    }
-    res.status(200).json({
-      message: "poll found",
-      obj: poll
-    })
-  })
-})
-
-router.patch('/vote', function(req, res) {
-  var decoded = jwt.decode(req.query.token);
-  Poll.findById(req.body.pollid, function(err, poll) {
-    if (err) {
-      return res.status(500).json({
-        title: "poll not found",
-        error: err
-      })
-    }
-    if (!poll) {
-      return res.status(500).json({
-        title: "poll not found",
-        error: err
-      })
-    }
-    if (poll.voters.indexOf(decoded.user._id) !== -1) {
-      return res.status(500).json({
-        title: "User can only vote once",
-        error: {message: "Only one submission"}
-      })
-    }
-    var index = req.query.index;
-    var votes = poll.votes[index];
-    poll.votes[index] = votes + 1;
-    poll.markModified('votes');
-    poll.voters.push(decoded.user._id);
-    poll.markModified('voters');
-    poll.save(function(err, data) {
-      if (err) {
-        return res.status(500).json({
-          title: "poll not found",
-          error: err
-        })
-      }
-      res.status(201).json({
-        message: 'vote incremented',
-        obj: data
-      })
-    });
-
-  })
-})
-
 
 router.delete('/:id', function(req, res) {
   var decoded = jwt.decode(req.query.token);
@@ -235,48 +282,6 @@ router.delete('/:id', function(req, res) {
 })
 })
 
-router.post('/custom', function(req, res) {
-  var decoded = jwt.decode(req.query.token);
-  Poll.findById(req.body.pollid, function(err, poll) {
-    if (err) {
-      return res.status(500).json({
-        title: "poll not found",
-        error: err
-      })
-    }
-    if (!poll) {
-      return res.status(500).json({
-        title: "poll not found",
-        error: err
-      })
-    }
-    if (poll.voters.indexOf(decoded.user._id) !== -1) {
-      return res.status(500).json({
-        title: "User can only vote once",
-        error: {message: "Only one submission"}
-      })
-    }
-    var custom = req.query.custom;
-    poll.options.push(req.query.custom);
-    poll.votes.push(1);
-    poll.voters.push(decoded.user._id);
-    poll.markModified('options');
-    poll.markModified('votes');
-    poll.markModified('voters');
-    poll.save(function(err, data) {
-      if (err) {
-        return res.status(500).json({
-          title: "poll not found",
-          error: err
-        })
-      }
-      res.status(201).json({
-        message: 'vote incremented',
-        obj: data
-      })
-    })
-  })
-})
 
 
 
