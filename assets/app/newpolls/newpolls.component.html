@@ -1,29 +1,31 @@
-<form [formGroup]="pollForm"  >
-  <div class="row">
-    <div class="col-xs-8">
-      <div class="form-group">
-        <label for="title">Enter a title</label>
-        <input
+<div class='contain'>
+  <h1>Create a new Poll!</h1>
+  <form [formGroup]="pollForm"  >
+    <div class="row">
+      <div class="col-xs-8">
+        <div class="form-group">
+          <label for="title">Enter a title</label>
+          <input
           type="text"
           id="title"
           formControlName="title"
           class="form-control">
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-xs-8">
-      <label class="opt">Enter options</label>
+    <div class="row">
+      <div class="col-xs-8">
+        <label class="opt">Enter options</label>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-xs-12" formArrayName="options">
-      <div
-      class="row"
-      *ngFor="let option of options.controls; index as i"
-      style="margin-bottom: 10px;">
+    <div class="row">
+      <div class="col-xs-12" formArrayName="options">
+        <div
+        class="row"
+        *ngFor="let option of options.controls; index as i"
+        style="margin-bottom: 10px;">
         <div class="col-xs-8">
           <input
           type="text"
@@ -32,12 +34,12 @@
           >
         </div>
       </div>
-        <div class="form-group">
-          <button
-            type="button"
-            class="btn btn-success"
-            (click)="onAddOption()">Add Option</button>
-        </div>
+      <div class="form-group">
+        <button
+        type="button"
+        class="btn btn-success add"
+        (click)="onAddOption()">Add Option</button>
+      </div>
     </div>
   </div>
   <hr>
@@ -45,10 +47,14 @@
     <div class="col-xs-12">
       <div class="form-group">
         <button
-          type="button"
-          class="btn btn-primary"
-          (click)="onSubmit()">Make Poll!</button>
+        type="button"
+        class="btn btn-primary submit"
+        (click)="onSubmit()"
+        [disabled]="!pollForm.valid">Make Poll!</button>
       </div>
     </div>
   </div>
 </form>
+
+
+</div>

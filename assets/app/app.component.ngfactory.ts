@@ -13,7 +13,10 @@ import * as import3 from './header/header.component';
 import * as import4 from './header/twitter.service';
 import * as import5 from '@angular/router';
 import * as import6 from '@angular/common';
-import * as import7 from './app.component';
+import * as import7 from './errors/error.component.ngfactory';
+import * as import8 from './errors/error.component';
+import * as import9 from './errors/error.service';
+import * as import10 from './app.component';
 const styles_AppComponent:any[] = [import0.styles];
 export const RenderType_AppComponent:import1.RendererType2 = import1.ɵcrt({
   encapsulation: 0,
@@ -23,6 +26,12 @@ export const RenderType_AppComponent:import1.RendererType2 = import1.ɵcrt({
 );
 export function View_AppComponent_0(l:any):import1.ɵViewDefinition {
   return import1.ɵvid(0,[
+      (l()(),import1.ɵeld(0,(null as any),(null as any),10,'div',[[
+        'class',
+        'container'
+      ]
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n  '])),
     (l()(),import1.ɵeld(0,(null as any),(null as any),1,'app-header',([] as any[]),(null as any),(null as any),(null as any),import2.View_HeaderComponent_0,import2.RenderType_HeaderComponent)),
     import1.ɵdid(114688,(null as any),0,import3.HeaderComponent,[
       import4.TwitterService,
@@ -30,13 +39,13 @@ export function View_AppComponent_0(l:any):import1.ɵViewDefinition {
       import6.Location
     ]
     ,(null as any),(null as any)),
-    (l()(),import1.ɵted((null as any),['\n'])),
+    (l()(),import1.ɵted((null as any),['\n  '])),
       (l()(),import1.ɵeld(0,(null as any),(null as any),4,'div',[[
         'class',
         'mainmargins'
       ]
     ],(null as any),(null as any),(null as any),(null as any),(null as any))),
-    (l()(),import1.ɵted((null as any),['\n  '])),
+    (l()(),import1.ɵted((null as any),['\n    '])),
     (l()(),import1.ɵeld(16777216,(null as any),(null as any),1,'router-outlet',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
     import1.ɵdid(147456,(null as any),0,import5.RouterOutlet,[
       import5.RouterOutletMap,
@@ -49,19 +58,24 @@ export function View_AppComponent_0(l:any):import1.ɵViewDefinition {
 
     ]
     ,(null as any),(null as any)),
+    (l()(),import1.ɵted((null as any),['\n  '])),
     (l()(),import1.ɵted((null as any),['\n'])),
+    (l()(),import1.ɵted((null as any),['\n'])),
+    (l()(),import1.ɵeld(0,(null as any),(null as any),1,'app-error',([] as any[]),(null as any),(null as any),(null as any),import7.View_ErrorComponent_0,import7.RenderType_ErrorComponent)),
+    import1.ɵdid(114688,(null as any),0,import8.ErrorComponent,[import9.ErrorService],(null as any),(null as any)),
     (l()(),import1.ɵted((null as any),['\n']))
   ]
   ,(ck,v) => {
-    ck(v,1,0);
+    ck(v,3,0);
+    ck(v,13,0);
   },(null as any));
 }
 function View_AppComponent_Host_0(l:any):import1.ɵViewDefinition {
   return import1.ɵvid(0,[
     (l()(),import1.ɵeld(0,(null as any),(null as any),1,'my-app',([] as any[]),(null as any),(null as any),(null as any),View_AppComponent_0,RenderType_AppComponent)),
-    import1.ɵdid(49152,(null as any),0,import7.AppComponent,([] as any[]),(null as any),(null as any))
+    import1.ɵdid(49152,(null as any),0,import10.AppComponent,([] as any[]),(null as any),(null as any))
   ]
   ,(null as any),(null as any));
 }
-export const AppComponentNgFactory:import1.ComponentFactory<import7.AppComponent> = import1.ɵccf('my-app',import7.AppComponent,View_AppComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2FwcC5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2FwcC5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9uZ3Roby9Eb2N1bWVudHMvSmF2YVNjcmlwdC9Wb3RpbmdfYXBwL2Fzc2V0cy9hcHAvYXBwLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2FwcC5jb21wb25lbnQudHMuQXBwQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGFwcC1oZWFkZXI+PC9hcHAtaGVhZGVyPlxyXG48ZGl2IGNsYXNzPVwibWFpbm1hcmdpbnNcIj5cclxuICA8cm91dGVyLW91dGxldD48L3JvdXRlci1vdXRsZXQ+XHJcbjwvZGl2PlxyXG4iLCI8bXktYXBwPjwvbXktYXBwPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUNBQTtnQkFBQTs7OztJQUFBO0tBQUE7SUFBeUI7TUFDekI7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUF5QjtJQUN2QjtnQkFBQTs7OztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7SUFBK0I7SUFDM0I7OztJQUhOOzs7OztJQ0FBO2dCQUFBOzs7OyJ9
+export const AppComponentNgFactory:import1.ComponentFactory<import10.AppComponent> = import1.ɵccf('my-app',import10.AppComponent,View_AppComponent_Host_0,{},{},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2FwcC5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2FwcC5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9uZ3Roby9Eb2N1bWVudHMvSmF2YVNjcmlwdC9Wb3RpbmdfYXBwL2Fzc2V0cy9hcHAvYXBwLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2FwcC5jb21wb25lbnQudHMuQXBwQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGRpdiBjbGFzcz1cImNvbnRhaW5lclwiPlxyXG4gIDxhcHAtaGVhZGVyPjwvYXBwLWhlYWRlcj5cclxuICA8ZGl2IGNsYXNzPVwibWFpbm1hcmdpbnNcIj5cclxuICAgIDxyb3V0ZXItb3V0bGV0Pjwvcm91dGVyLW91dGxldD5cclxuICA8L2Rpdj5cclxuPC9kaXY+XHJcbjxhcHAtZXJyb3I+PC9hcHAtZXJyb3I+XHJcbiIsIjxteS1hcHA+PC9teS1hcHA+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztNQ0FBO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBdUI7SUFDckI7Z0JBQUE7Ozs7SUFBQTtLQUFBO0lBQXlCO01BQ3pCO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBeUI7SUFDdkI7Z0JBQUE7Ozs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO0lBQStCO0lBQzNCO0lBQ0Y7SUFDTjtnQkFBQTtJQUF1Qjs7O0lBTHJCO0lBS0Y7Ozs7O0lDTkE7Z0JBQUE7Ozs7In0=

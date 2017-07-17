@@ -17,6 +17,7 @@ export class PollService {
   constructor(private http: Http, private errorService: ErrorService) {}
 
   pollisClicked = new Subject<Poll>();
+  private url: string = 'https://voter-app1.herokuapp.com';
 
   clickedPoll(poll: Poll) {
     this.pollisClicked.next(poll);
@@ -34,8 +35,8 @@ export class PollService {
     const token = localStorage.getItem('token')
     ? '?token=' + localStorage.getItem('token')
     : '';
-    return this.http.post('http://localhost:3000/polls' + token, body, {headers: headers})
-    .map((response: Response) => response.json())
+    return this.http.post(this.url + '/polls' + token, body, {headers: headers})
+    .map((response: Response) => response.json().obj)
     .catch((error: Response) => Observable.throw(error.json()));
   }
 
@@ -43,7 +44,7 @@ export class PollService {
     var token = localStorage.getItem('token')
     ? '?token=' + localStorage.getItem('token')
     : '';
-    return this.http.get('http://localhost:3000/polls/mypolls' + token)
+    return this.http.get(this.url + '/polls/mypolls' + token)
     .map((response: Response) => {
       const polls = response.json().obj;
       let transPoll: Poll[] = [];
@@ -64,7 +65,7 @@ export class PollService {
     const token = localStorage.getItem('token')
     ? "?token=" + localStorage.getItem('token')
     : "";
-    return this.http.get('http://localhost:3000/polls/mypoll' + token + '&id=' + id)
+    return this.http.get(this.url + '/polls/mypoll' + token + '&id=' + id)
     .map((response: Response) => {
       var tempPoll = response.json().obj
       var myPoll = new Poll(tempPoll.title,
@@ -84,7 +85,29 @@ export class PollService {
     const token = localStorage.getItem('token')
     ? "?token=" + localStorage.getItem('token')
     : "";
-    return this.http.patch('http://localhost:3000/polls/vote' + token + '&index=' + index, body, {headers: headers})
+    return this.http.patch(this.url + '/polls/vote' + token + '&index=' + index, body, {headers: headers})
+    .map((response: Response) => {
+      var tempPoll = response.json().obj
+      var myPoll = new Poll(tempPoll.title,
+                            tempPoll.options,
+                            tempPoll.creator,
+                            tempPoll._id,
+                            tempPoll.votes)
+    return myPoll;
+    })
+    .catch((error: Response) => {
+      this.errorService.handleError(error.json());
+      return Observable.throw(error.json());
+    })
+  }
+
+  addCustom(custom, poll) {
+    const body = JSON.stringify(poll);
+    const headers = new Headers({'Content-Type': 'application/json'});
+    const token = localStorage.getItem('token')
+    ? "?token=" + localStorage.getItem('token')
+    : "";
+    return this.http.post(this.url + '/polls/custom' + token + '&custom=' + custom, body, {headers: headers})
     .map((response: Response) => {
       var tempPoll = response.json().obj
       var myPoll = new Poll(tempPoll.title,
@@ -103,7 +126,7 @@ export class PollService {
   deletePoll(poll: Poll) {
     var id = poll.pollid
     const token = localStorage.getItem('token') ? "?token=" + localStorage.getItem('token') : '';
-    return this.http.delete('http://localhost:3000/polls/' + id + token)
+    return this.http.delete(this.url + '/polls/' + id + token)
     .map((response: Response) => response.json().obj)
     .catch((error: Response) => {
       this.errorService.handleError(error.json());
@@ -112,7 +135,7 @@ export class PollService {
   }
 
   getAllPolls() {
-    return this.http.get('http://localhost:3000/polls')
+    return this.http.get(this.url + '/polls')
     .map((response: Response) => {
       const polls = response.json().obj;
       let transPoll: Poll[] = [];

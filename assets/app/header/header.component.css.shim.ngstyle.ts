@@ -6,5 +6,5 @@
  /* tslint:disable */
 
 
-export const styles:any[] = ['.btn-Twitter[_ngcontent-%COMP%] {\r\n  color: #fff;\r\n  background-color: #4099ff;\r\n}\r\n\r\n.btn-Twitter[_ngcontent-%COMP%]:hover {\r\n  color: black;\r\n}'];
+export const styles:any[] = ['.navbar[_ngcontent-%COMP%] {\r\n  background-color: #f8f8f8;\r\n;\r\n}\r\n\r\n.btn-Twitter[_ngcontent-%COMP%] {\r\n  color: #fff;\r\n  background-color: #42ab9e;\r\n  margin-top: 7px;\r\n}\r\n\r\n.btn-Twitter[_ngcontent-%COMP%]:hover {\r\n  color: black;\r\n}\r\n\r\n.navbar-brand[_ngcontent-%COMP%] {\r\n  color: #42ab9e;\r\n  font-size: 1.5em;\r\n}'];
 //# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcy5zaGltLm5nc3R5bGUudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9DOi9Vc2Vycy9uZ3Roby9Eb2N1bWVudHMvSmF2YVNjcmlwdC9Wb3RpbmdfYXBwL2Fzc2V0cy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7OyJ9

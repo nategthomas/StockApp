@@ -10,10 +10,14 @@ import * as import0 from '@angular/core';
 import * as import1 from './app-routing.module';
 import * as import2 from '@angular/router';
 import * as import3 from '@angular/common';
-import * as import4 from './newpolls/newpolls.component.ngfactory';
-import * as import5 from './mypolls/mypolls.component.ngfactory';
-import * as import6 from './newpolls/newpolls.component';
-import * as import7 from './mypolls/mypolls.component';
+import * as import4 from './allpolls/allpolls.component.ngfactory';
+import * as import5 from './newpolls/newpolls.component.ngfactory';
+import * as import6 from './mypolls/mypolls.component.ngfactory';
+import * as import7 from './mypolls/allmypolls.component.ngfactory';
+import * as import8 from './allpolls/allpolls.component';
+import * as import9 from './newpolls/newpolls.component';
+import * as import10 from './mypolls/mypolls.component';
+import * as import11 from './mypolls/allmypolls.component';
 class AppRoutingModuleInjector extends import0.ɵNgModuleInjector<import1.AppRoutingModule> {
   _ɵa_0:any;
   _UrlSerializer_1:import2.DefaultUrlSerializer;
@@ -38,8 +42,10 @@ class AppRoutingModuleInjector extends import0.ɵNgModuleInjector<import1.AppRou
   __APP_BOOTSTRAP_LISTENER_20:any[];
   constructor(parent:import0.Injector) {
     super(parent,[
-      import4.NewpollsComponentNgFactory,
-      import5.MypollsComponentNgFactory
+      import4.AllpollsComponentNgFactory,
+      import5.NewpollsComponentNgFactory,
+      import6.MypollsComponentNgFactory,
+      import7.AllmypollsComponentNgFactory
     ]
     ,([] as any[]));
   }
@@ -94,17 +100,27 @@ class AppRoutingModuleInjector extends import0.ɵNgModuleInjector<import1.AppRou
       this._ROUTES_7 = [[
         {
           path: '',
-          component: import6.NewpollsComponent
+          component: import8.AllpollsComponent
         }
         ,
         {
           path: 'newpolls',
-          component: import6.NewpollsComponent
+          component: import9.NewpollsComponent
         }
         ,
         {
           path: 'mypolls',
-          component: import7.MypollsComponent
+          component: import10.MypollsComponent
+        }
+        ,
+        {
+          path: 'allmypolls',
+          component: import11.AllmypollsComponent
+        }
+        ,
+        {
+          path: 'allpolls',
+          component: import8.AllpollsComponent
         }
 
       ]
@@ -143,4 +159,4 @@ class AppRoutingModuleInjector extends import0.ɵNgModuleInjector<import1.AppRou
   }
 }
 export const AppRoutingModuleNgFactory:import0.NgModuleFactory<import1.AppRoutingModule> = new import0.NgModuleFactory<any>(AppRoutingModuleInjector,import1.AppRoutingModule);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2FwcC1yb3V0aW5nLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9DOi9Vc2Vycy9uZ3Roby9Eb2N1bWVudHMvSmF2YVNjcmlwdC9Wb3RpbmdfYXBwL2Fzc2V0cy9hcHAvYXBwLXJvdXRpbmcubW9kdWxlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIiAiXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2FwcC1yb3V0aW5nLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9DOi9Vc2Vycy9uZ3Roby9Eb2N1bWVudHMvSmF2YVNjcmlwdC9Wb3RpbmdfYXBwL2Fzc2V0cy9hcHAvYXBwLXJvdXRpbmcubW9kdWxlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIiAiXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9

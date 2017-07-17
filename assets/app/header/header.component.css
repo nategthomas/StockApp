@@ -1,8 +1,19 @@
+.navbar {
+  background-color: #f8f8f8;
+;
+}
+
 .btn-Twitter {
   color: #fff;
-  background-color: #4099ff;
+  background-color: #42ab9e;
+  margin-top: 7px;
 }
 
 .btn-Twitter:hover {
   color: black;
+}
+
+.navbar-brand {
+  color: #42ab9e;
+  font-size: 1.5em;
 }

@@ -1,6 +1,6 @@
 .chart-container {
-  height: 450px;
-  width: 450px;
+  height: 500px;
+  width: 650px;
 }
 .poll-container {
   padding: 20px;
@@ -15,7 +15,13 @@
 
 button {
   width: 100%;
-  margin: 4px;
+  margin: 10px;
+}
+
+.submit {
+  background-color: #42ab9e;
+  border-color: #42ab9e;
+
 }
 
 select {
@@ -26,4 +32,10 @@ select {
 .dropdown {
   margin-left: 0px;
   padding-left: 0px;
+}
+
+chart {
+  height: 430px;
+  width: 430px;
+  margin: 0 auto;
 }

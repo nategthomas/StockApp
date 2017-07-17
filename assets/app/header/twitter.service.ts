@@ -8,10 +8,10 @@ import {Params} from "@angular/router";
 export class TwitterService {
   constructor(private http: Http) {}
 
-
+  private url: string = 'https://voter-app1.herokuapp.com';
 
   signIn() {
-    window.location.href = "http://localhost:3000/twitter/login"
+    window.location.href = this.url + "/twitter/login";
   }
 
 
@@ -25,4 +25,3 @@ export class TwitterService {
   }
 
 }
-//window.location.href ="http://localhost:3000/twitter/login"

@@ -9,10 +9,12 @@ import {PollService} from "../newpolls/poll.service";
   templateUrl: './singlepoll.component.html',
   styles: [`
     .well {
-      background-color: white;
+      background-color:  white;
     }
     .titular {
       text-align: center;
+      font-size: 1.25em;
+      color: #42ab9e;
     }
     .titular:hover {
       cursor: pointer;

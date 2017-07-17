@@ -8,8 +8,10 @@ import {PollService} from "../newpolls/poll.service";
   templateUrl: './allmypolls.component.html',
   styles: [`
     .contain {
-      background-color: #f8f8f8;
+      background-color:  #f8f8f8;
       padding: 20px 10px 20px 10px;
+      border-radius: 5px;
+
     }
     h1, h3 {
       text-align: center;
@@ -33,7 +35,7 @@ export class AllmypollsComponent implements OnInit {
     }
 
     onClic(poll: Poll) {
-      this.router.navigate(['/mypolls'], { queryParams: {data: poll.pollid} })
+      this.router.navigate(['/mypolls'], { queryParams: {data: poll.pollid, userid: poll.user} })
     }
 
 

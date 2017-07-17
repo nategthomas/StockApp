@@ -19,6 +19,7 @@ import {AllpollsComponent} from "./allpolls/allpolls.component"
 
 
 
+
 @NgModule({
     declarations: [
       AppComponent,

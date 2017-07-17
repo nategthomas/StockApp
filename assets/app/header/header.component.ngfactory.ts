@@ -21,6 +21,114 @@ export const RenderType_HeaderComponent:import1.RendererType2 = import1.ɵcrt({
 );
 function View_HeaderComponent_1(l:any):import1.ɵViewDefinition {
   return import1.ɵvid(0,[
+    (l()(),import1.ɵeld(0,(null as any),(null as any),3,'li',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),2,'a',[[
+        'routerLink',
+        '/allmypolls'
+      ]
+    ],[
+      [
+        1,
+        'target',
+        0
+      ]
+      ,
+      [
+        8,
+        'href',
+        4
+      ]
+
+    ]
+      ,[[
+        (null as any),
+        'click'
+      ]
+    ],(v,en,$event) => {
+      var ad:boolean = true;
+      if (('click' === en)) {
+        const pd_0:any = ((<any>import1.ɵnov(v,2).onClick($event.button,$event.ctrlKey,$event.metaKey)) !== false);
+        ad = (pd_0 && ad);
+      }
+      return ad;
+    },(null as any),(null as any))),
+    import1.ɵdid(671744,(null as any),0,import2.RouterLinkWithHref,[
+      import2.Router,
+      import2.ActivatedRoute,
+      import3.LocationStrategy
+    ]
+      ,{routerLink: [
+        0,
+        'routerLink'
+      ]
+    },(null as any)),
+    (l()(),import1.ɵted((null as any),['My polls']))
+  ]
+  ,(ck,v) => {
+    const currVal_2:any = '/allmypolls';
+    ck(v,2,0,currVal_2);
+  },(ck,v) => {
+    const currVal_0:any = import1.ɵnov(v,2).target;
+    const currVal_1:any = import1.ɵnov(v,2).href;
+    ck(v,1,0,currVal_0,currVal_1);
+  });
+}
+function View_HeaderComponent_2(l:any):import1.ɵViewDefinition {
+  return import1.ɵvid(0,[
+    (l()(),import1.ɵeld(0,(null as any),(null as any),3,'li',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),2,'a',[[
+        'routerLink',
+        '/newpolls'
+      ]
+    ],[
+      [
+        1,
+        'target',
+        0
+      ]
+      ,
+      [
+        8,
+        'href',
+        4
+      ]
+
+    ]
+      ,[[
+        (null as any),
+        'click'
+      ]
+    ],(v,en,$event) => {
+      var ad:boolean = true;
+      if (('click' === en)) {
+        const pd_0:any = ((<any>import1.ɵnov(v,2).onClick($event.button,$event.ctrlKey,$event.metaKey)) !== false);
+        ad = (pd_0 && ad);
+      }
+      return ad;
+    },(null as any),(null as any))),
+    import1.ɵdid(671744,(null as any),0,import2.RouterLinkWithHref,[
+      import2.Router,
+      import2.ActivatedRoute,
+      import3.LocationStrategy
+    ]
+      ,{routerLink: [
+        0,
+        'routerLink'
+      ]
+    },(null as any)),
+    (l()(),import1.ɵted((null as any),['New poll']))
+  ]
+  ,(ck,v) => {
+    const currVal_2:any = '/newpolls';
+    ck(v,2,0,currVal_2);
+  },(ck,v) => {
+    const currVal_0:any = import1.ɵnov(v,2).target;
+    const currVal_1:any = import1.ɵnov(v,2).href;
+    ck(v,1,0,currVal_0,currVal_1);
+  });
+}
+function View_HeaderComponent_3(l:any):import1.ɵViewDefinition {
+  return import1.ɵvid(0,[
     (l()(),import1.ɵeld(0,(null as any),(null as any),2,'li',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
     (l()(),import1.ɵeld(0,(null as any),(null as any),1,'button',[
       [
@@ -51,7 +159,7 @@ function View_HeaderComponent_1(l:any):import1.ɵViewDefinition {
   ]
   ,(null as any),(null as any));
 }
-function View_HeaderComponent_2(l:any):import1.ɵViewDefinition {
+function View_HeaderComponent_4(l:any):import1.ɵViewDefinition {
   return import1.ɵvid(0,[
     (l()(),import1.ɵeld(0,(null as any),(null as any),2,'li',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
     (l()(),import1.ɵeld(0,(null as any),(null as any),1,'button',[
@@ -98,23 +206,68 @@ function View_HeaderComponent_2(l:any):import1.ɵViewDefinition {
 }
 export function View_HeaderComponent_0(l:any):import1.ɵViewDefinition {
   return import1.ɵvid(0,[
-      (l()(),import1.ɵeld(0,(null as any),(null as any),37,'nav',[[
+      (l()(),import1.ɵeld(0,(null as any),(null as any),43,'nav',[[
         'class',
         'navbar navbar-default'
       ]
     ],(null as any),(null as any),(null as any),(null as any),(null as any))),
     (l()(),import1.ɵted((null as any),['\n  '])),
-      (l()(),import1.ɵeld(0,(null as any),(null as any),34,'div',[[
+      (l()(),import1.ɵeld(0,(null as any),(null as any),40,'div',[[
         'class',
         'container-fluid'
       ]
     ],(null as any),(null as any),(null as any),(null as any),(null as any))),
     (l()(),import1.ɵted((null as any),['\n    '])),
-      (l()(),import1.ɵeld(0,(null as any),(null as any),5,'div',[[
+      (l()(),import1.ɵeld(0,(null as any),(null as any),14,'div',[[
         'class',
         'navbar-header'
       ]
     ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n      '])),
+    (l()(),import1.ɵeld(0,(null as any),(null as any),7,'button',[
+      [
+        'class',
+        'navbar-toggle'
+      ]
+      ,
+      [
+        'type',
+        'button'
+      ]
+
+    ]
+      ,(null as any),[[
+        (null as any),
+        'click'
+      ]
+    ],(v,en,$event) => {
+      var ad:boolean = true;
+      var co:import4.HeaderComponent = v.component;
+      if (('click' === en)) {
+        const pd_0:any = ((<any>co.toggleCollapse()) !== false);
+        ad = (pd_0 && ad);
+      }
+      return ad;
+    },(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n        '])),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),0,'span',[[
+        'class',
+        'icon-bar'
+      ]
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n        '])),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),0,'span',[[
+        'class',
+        'icon-bar'
+      ]
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n        '])),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),0,'span',[[
+        'class',
+        'icon-bar'
+      ]
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n      '])),
     (l()(),import1.ɵted((null as any),['\n      '])),
     (l()(),import1.ɵeld(0,(null as any),(null as any),2,'a',[
       [
@@ -149,7 +302,7 @@ export function View_HeaderComponent_0(l:any):import1.ɵViewDefinition {
     ],(v,en,$event) => {
       var ad:boolean = true;
       if (('click' === en)) {
-        const pd_0:any = ((<any>import1.ɵnov(v,7).onClick($event.button,$event.ctrlKey,$event.metaKey)) !== false);
+        const pd_0:any = ((<any>import1.ɵnov(v,16).onClick($event.button,$event.ctrlKey,$event.metaKey)) !== false);
         ad = (pd_0 && ad);
       }
       return ad;
@@ -166,70 +319,28 @@ export function View_HeaderComponent_0(l:any):import1.ɵViewDefinition {
     },(null as any)),
     (l()(),import1.ɵted((null as any),['Voter App'])),
     (l()(),import1.ɵted((null as any),['\n    '])),
-    (l()(),import1.ɵted((null as any),['\n\n    '])),
-      (l()(),import1.ɵeld(0,(null as any),(null as any),24,'div',[[
+    (l()(),import1.ɵted((null as any),['\n    '])),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),21,'div',[[
         'class',
-        'collapse navbar-collapse'
+        'navbar-collapse'
       ]
-    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+      ],[[
+        2,
+        'collapse',
+        (null as any)
+      ]
+    ],(null as any),(null as any),(null as any),(null as any))),
     (l()(),import1.ɵted((null as any),['\n      '])),
-      (l()(),import1.ɵeld(0,(null as any),(null as any),21,'ul',[[
+      (l()(),import1.ɵeld(0,(null as any),(null as any),18,'ul',[[
         'class',
         'nav navbar-nav navbar-right'
       ]
     ],(null as any),(null as any),(null as any),(null as any),(null as any))),
     (l()(),import1.ɵted((null as any),['\n        '])),
-    (l()(),import1.ɵeld(0,(null as any),(null as any),2,'li',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
-    (l()(),import1.ɵeld(0,(null as any),(null as any),1,'a',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
-    (l()(),import1.ɵted((null as any),['All polls'])),
-    (l()(),import1.ɵted((null as any),['\n        '])),
     (l()(),import1.ɵeld(0,(null as any),(null as any),3,'li',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
       (l()(),import1.ɵeld(0,(null as any),(null as any),2,'a',[[
         'routerLink',
-        '/mypolls'
-      ]
-    ],[
-      [
-        1,
-        'target',
-        0
-      ]
-      ,
-      [
-        8,
-        'href',
-        4
-      ]
-
-    ]
-      ,[[
-        (null as any),
-        'click'
-      ]
-    ],(v,en,$event) => {
-      var ad:boolean = true;
-      if (('click' === en)) {
-        const pd_0:any = ((<any>import1.ɵnov(v,21).onClick($event.button,$event.ctrlKey,$event.metaKey)) !== false);
-        ad = (pd_0 && ad);
-      }
-      return ad;
-    },(null as any),(null as any))),
-    import1.ɵdid(671744,(null as any),0,import2.RouterLinkWithHref,[
-      import2.Router,
-      import2.ActivatedRoute,
-      import3.LocationStrategy
-    ]
-      ,{routerLink: [
-        0,
-        'routerLink'
-      ]
-    },(null as any)),
-    (l()(),import1.ɵted((null as any),['My polls'])),
-    (l()(),import1.ɵted((null as any),['\n        '])),
-    (l()(),import1.ɵeld(0,(null as any),(null as any),3,'li',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
-      (l()(),import1.ɵeld(0,(null as any),(null as any),2,'a',[[
-        'routerLink',
-        '/newpolls'
+        '/allpolls'
       ]
     ],[
       [
@@ -267,7 +378,7 @@ export function View_HeaderComponent_0(l:any):import1.ɵViewDefinition {
         'routerLink'
       ]
     },(null as any)),
-    (l()(),import1.ɵted((null as any),['New poll'])),
+    (l()(),import1.ɵted((null as any),['All polls'])),
     (l()(),import1.ɵted((null as any),['\n        '])),
     (l()(),import1.ɵand(16777216,(null as any),(null as any),1,(null as any),View_HeaderComponent_1)),
     import1.ɵdid(16384,(null as any),0,import3.NgIf,[
@@ -290,6 +401,28 @@ export function View_HeaderComponent_0(l:any):import1.ɵViewDefinition {
         'ngIf'
       ]
     },(null as any)),
+    (l()(),import1.ɵted((null as any),['\n        '])),
+    (l()(),import1.ɵand(16777216,(null as any),(null as any),1,(null as any),View_HeaderComponent_3)),
+    import1.ɵdid(16384,(null as any),0,import3.NgIf,[
+      import1.ViewContainerRef,
+      import1.TemplateRef
+    ]
+      ,{ngIf: [
+        0,
+        'ngIf'
+      ]
+    },(null as any)),
+    (l()(),import1.ɵted((null as any),['\n        '])),
+    (l()(),import1.ɵand(16777216,(null as any),(null as any),1,(null as any),View_HeaderComponent_4)),
+    import1.ɵdid(16384,(null as any),0,import3.NgIf,[
+      import1.ViewContainerRef,
+      import1.TemplateRef
+    ]
+      ,{ngIf: [
+        0,
+        'ngIf'
+      ]
+    },(null as any)),
     (l()(),import1.ɵted((null as any),['\n      '])),
     (l()(),import1.ɵted((null as any),['\n    '])),
     (l()(),import1.ɵted((null as any),['\n  '])),
@@ -299,25 +432,27 @@ export function View_HeaderComponent_0(l:any):import1.ɵViewDefinition {
   ,(ck,v) => {
     var co:import4.HeaderComponent = v.component;
     const currVal_2:any = '/';
-    ck(v,7,0,currVal_2);
-    const currVal_5:any = '/mypolls';
-    ck(v,21,0,currVal_5);
-    const currVal_8:any = '/newpolls';
-    ck(v,26,0,currVal_8);
+    ck(v,16,0,currVal_2);
+    const currVal_6:any = '/allpolls';
+    ck(v,26,0,currVal_6);
+    const currVal_7:any = co.isLoggedIn();
+    ck(v,30,0,currVal_7);
+    const currVal_8:any = co.isLoggedIn();
+    ck(v,33,0,currVal_8);
     const currVal_9:boolean = !co.isLoggedIn();
-    ck(v,30,0,currVal_9);
+    ck(v,36,0,currVal_9);
     const currVal_10:any = co.isLoggedIn();
-    ck(v,33,0,currVal_10);
+    ck(v,39,0,currVal_10);
   },(ck,v) => {
-    const currVal_0:any = import1.ɵnov(v,7).target;
-    const currVal_1:any = import1.ɵnov(v,7).href;
-    ck(v,6,0,currVal_0,currVal_1);
-    const currVal_3:any = import1.ɵnov(v,21).target;
-    const currVal_4:any = import1.ɵnov(v,21).href;
-    ck(v,20,0,currVal_3,currVal_4);
-    const currVal_6:any = import1.ɵnov(v,26).target;
-    const currVal_7:any = import1.ɵnov(v,26).href;
-    ck(v,25,0,currVal_6,currVal_7);
+    var co:import4.HeaderComponent = v.component;
+    const currVal_0:any = import1.ɵnov(v,16).target;
+    const currVal_1:any = import1.ɵnov(v,16).href;
+    ck(v,15,0,currVal_0,currVal_1);
+    const currVal_3:any = co.isCollapsed;
+    ck(v,20,0,currVal_3);
+    const currVal_4:any = import1.ɵnov(v,26).target;
+    const currVal_5:any = import1.ɵnov(v,26).href;
+    ck(v,25,0,currVal_4,currVal_5);
   });
 }
 function View_HeaderComponent_Host_0(l:any):import1.ɵViewDefinition {
@@ -335,4 +470,4 @@ function View_HeaderComponent_Host_0(l:any):import1.ɵViewDefinition {
   },(null as any));
 }
 export const HeaderComponentNgFactory:import1.ComponentFactory<import4.HeaderComponent> = import1.ɵccf('app-header',import4.HeaderComponent,View_HeaderComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2hlYWRlci9oZWFkZXIuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL25ndGhvL0RvY3VtZW50cy9KYXZhU2NyaXB0L1ZvdGluZ19hcHAvYXNzZXRzL2FwcC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL25ndGhvL0RvY3VtZW50cy9KYXZhU2NyaXB0L1ZvdGluZ19hcHAvYXNzZXRzL2FwcC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnRzLkhlYWRlckNvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxuYXYgY2xhc3M9XCJuYXZiYXIgbmF2YmFyLWRlZmF1bHRcIj5cclxuICA8ZGl2IGNsYXNzPVwiY29udGFpbmVyLWZsdWlkXCI+XHJcbiAgICA8ZGl2IGNsYXNzPVwibmF2YmFyLWhlYWRlclwiPlxyXG4gICAgICA8YSByb3V0ZXJMaW5rPScvJyBjbGFzcz1cIm5hdmJhci1icmFuZFwiPlZvdGVyIEFwcDwvYT5cclxuICAgIDwvZGl2PlxyXG5cclxuICAgIDxkaXYgY2xhc3M9XCJjb2xsYXBzZSBuYXZiYXItY29sbGFwc2VcIj5cclxuICAgICAgPHVsIGNsYXNzPVwibmF2IG5hdmJhci1uYXYgbmF2YmFyLXJpZ2h0XCI+XHJcbiAgICAgICAgPGxpPjxhPkFsbCBwb2xsczwvYT48L2xpPlxyXG4gICAgICAgIDxsaT48YSByb3V0ZXJMaW5rPVwiL215cG9sbHNcIj5NeSBwb2xsczwvYT48L2xpPlxyXG4gICAgICAgIDxsaT48YSByb3V0ZXJMaW5rPVwiL25ld3BvbGxzXCI+TmV3IHBvbGw8L2E+PC9saT5cclxuICAgICAgICA8bGkgKm5nSWY9XCIhaXNMb2dnZWRJbigpXCIgPjxidXR0b24gY2xhc3M9XCJsb2dpbi1idXR0b24gYnRuIGJ0bi1ibG9jayBidG4tVHdpdHRlclwiIHR5cGU9XCJidXR0b25cIiAoY2xpY2spPVwidHdpdHRlckF1dGgoKVwiPkxvZ2luIHdpdGggVHdpdHRlcjwvYnV0dG9uPjwvbGk+XHJcbiAgICAgICAgPGxpICpuZ0lmPVwiaXNMb2dnZWRJbigpXCIgPjxidXR0b24gY2xhc3M9XCJsb2dpbi1idXR0b24gYnRuIGJ0bi1ibG9jayBidG4tVHdpdHRlclwiIHR5cGU9XCJidXR0b25cIiBuYW1lPVwiYnV0dG9uXCIgKGNsaWNrKT1cImxvZ291dCgpXCI+TG9nb3V0IHt7dXNlcn19PC9idXR0b24+PC9saT5cclxuICAgICAgPC91bD5cclxuICAgIDwvZGl2PlxyXG4gIDwvZGl2PlxyXG48L25hdj5cclxuIiwiPGFwcC1oZWFkZXI+PC9hcHAtaGVhZGVyPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lDV1E7SUFBMkI7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtNQUFBO01BQXFFO1FBQUE7UUFBQTtNQUFBO01BQXJFO0lBQUE7SUFBNkY7Ozs7OztJQUN4SDtJQUEwQjtNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO01BQUE7TUFBbUY7UUFBQTtRQUFBO01BQUE7TUFBbkY7SUFBQTtJQUFzRztNQUFBO01BQUE7SUFBQTtJQUFBOzs7O0lBQUE7SUFBQTs7Ozs7TUFaeEk7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUFtQztNQUNqQztRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQTZCO01BQzNCO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBMkI7SUFDekI7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBQTtJQUFBO2dCQUFBOzs7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQXVDO0lBQWE7SUFDaEQ7TUFFTjtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQXNDO01BQ3BDO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBd0M7SUFDdEM7SUFBSTtJQUFHO0lBQWtCO0lBQ3pCO01BQUk7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBO01BQUE7SUFBQTtnQkFBQTs7OztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUF5QjtJQUFpQjtJQUM5QztNQUFJO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtNQUFBO0lBQUE7Z0JBQUE7Ozs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBMEI7SUFBaUI7SUFDL0M7Z0JBQUE7OztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUF3SjtJQUN4SjtnQkFBQTs7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQTZKO0lBQzFKO0lBQ0Q7SUFDRjtJQUNGOzs7O0lBYkc7SUFBSCxTQUFHLFNBQUg7SUFNUztJQUFILFVBQUcsU0FBSDtJQUNHO0lBQUgsVUFBRyxTQUFIO0lBQ0E7SUFBSixVQUFJLFNBQUo7SUFDSTtJQUFKLFVBQUksVUFBSjs7SUFURjtJQUFBO0lBQUEsU0FBQSxtQkFBQTtJQU1NO0lBQUE7SUFBQSxVQUFBLG1CQUFBO0lBQ0E7SUFBQTtJQUFBLFVBQUEsbUJBQUE7Ozs7O0lDVlo7Z0JBQUE7Ozs7SUFBQTtLQUFBOzs7SUFBQTs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2hlYWRlci9oZWFkZXIuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL25ndGhvL0RvY3VtZW50cy9KYXZhU2NyaXB0L1ZvdGluZ19hcHAvYXNzZXRzL2FwcC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL25ndGhvL0RvY3VtZW50cy9KYXZhU2NyaXB0L1ZvdGluZ19hcHAvYXNzZXRzL2FwcC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnRzLkhlYWRlckNvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxuYXYgY2xhc3M9XCJuYXZiYXIgbmF2YmFyLWRlZmF1bHRcIj5cclxuICA8ZGl2IGNsYXNzPVwiY29udGFpbmVyLWZsdWlkXCI+XHJcbiAgICA8ZGl2IGNsYXNzPVwibmF2YmFyLWhlYWRlclwiPlxyXG4gICAgICA8YnV0dG9uIHR5cGU9XCJidXR0b25cIiBjbGFzcz1cIm5hdmJhci10b2dnbGVcIiAoY2xpY2spPVwidG9nZ2xlQ29sbGFwc2UoKVwiPlxyXG4gICAgICAgIDxzcGFuIGNsYXNzPVwiaWNvbi1iYXJcIj48L3NwYW4+XHJcbiAgICAgICAgPHNwYW4gY2xhc3M9XCJpY29uLWJhclwiPjwvc3Bhbj5cclxuICAgICAgICA8c3BhbiBjbGFzcz1cImljb24tYmFyXCI+PC9zcGFuPlxyXG4gICAgICA8L2J1dHRvbj5cclxuICAgICAgPGEgcm91dGVyTGluaz0nLycgY2xhc3M9XCJuYXZiYXItYnJhbmRcIiA+Vm90ZXIgQXBwPC9hPlxyXG4gICAgPC9kaXY+XHJcbiAgICA8ZGl2IGNsYXNzPVwibmF2YmFyLWNvbGxhcHNlXCIgW2NsYXNzLmNvbGxhcHNlXT1cImlzQ29sbGFwc2VkXCI+XHJcbiAgICAgIDx1bCBjbGFzcz1cIm5hdiBuYXZiYXItbmF2IG5hdmJhci1yaWdodFwiPlxyXG4gICAgICAgIDxsaT48YSByb3V0ZXJMaW5rPVwiL2FsbHBvbGxzXCI+QWxsIHBvbGxzPC9hPjwvbGk+XHJcbiAgICAgICAgPGxpICpuZ0lmPVwiaXNMb2dnZWRJbigpXCI+PGEgcm91dGVyTGluaz1cIi9hbGxteXBvbGxzXCI+TXkgcG9sbHM8L2E+PC9saT5cclxuICAgICAgICA8bGkgKm5nSWY9XCJpc0xvZ2dlZEluKClcIj48YSByb3V0ZXJMaW5rPVwiL25ld3BvbGxzXCI+TmV3IHBvbGw8L2E+PC9saT5cclxuICAgICAgICA8bGkgKm5nSWY9XCIhaXNMb2dnZWRJbigpXCIgPjxidXR0b24gY2xhc3M9XCJsb2dpbi1idXR0b24gYnRuIGJ0bi1ibG9jayBidG4tVHdpdHRlclwiIHR5cGU9XCJidXR0b25cIiAoY2xpY2spPVwidHdpdHRlckF1dGgoKVwiPkxvZ2luIHdpdGggVHdpdHRlcjwvYnV0dG9uPjwvbGk+XHJcbiAgICAgICAgPGxpICpuZ0lmPVwiaXNMb2dnZWRJbigpXCIgPjxidXR0b24gY2xhc3M9XCJsb2dpbi1idXR0b24gYnRuIGJ0bi1ibG9jayBidG4tVHdpdHRlclwiIHR5cGU9XCJidXR0b25cIiBuYW1lPVwiYnV0dG9uXCIgKGNsaWNrKT1cImxvZ291dCgpXCI+TG9nb3V0IHt7dXNlcn19PC9idXR0b24+PC9saT5cclxuICAgICAgPC91bD5cclxuICAgIDwvZGl2PlxyXG4gIDwvZGl2PlxyXG48L25hdj5cclxuIiwiPGFwcC1oZWFkZXI+PC9hcHAtaGVhZGVyPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lDYVE7TUFBeUI7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFB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

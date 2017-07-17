@@ -235,5 +235,50 @@ router.delete('/:id', function(req, res) {
 })
 })
 
+router.post('/custom', function(req, res) {
+  var decoded = jwt.decode(req.query.token);
+  Poll.findById(req.body.pollid, function(err, poll) {
+    if (err) {
+      return res.status(500).json({
+        title: "poll not found",
+        error: err
+      })
+    }
+    if (!poll) {
+      return res.status(500).json({
+        title: "poll not found",
+        error: err
+      })
+    }
+    if (poll.voters.indexOf(decoded.user._id) !== -1) {
+      return res.status(500).json({
+        title: "User can only vote once",
+        error: {message: "Only one submission"}
+      })
+    }
+    var custom = req.query.custom;
+    poll.options.push(req.query.custom);
+    poll.votes.push(1);
+    poll.voters.push(decoded.user._id);
+    poll.markModified('options');
+    poll.markModified('votes');
+    poll.markModified('voters');
+    poll.save(function(err, data) {
+      if (err) {
+        return res.status(500).json({
+          title: "poll not found",
+          error: err
+        })
+      }
+      res.status(201).json({
+        message: 'vote incremented',
+        obj: data
+      })
+    })
+  })
+})
+
+
+
 
 module.exports = router;

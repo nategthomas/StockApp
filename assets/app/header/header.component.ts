@@ -12,13 +12,21 @@ export class HeaderComponent implements OnInit {
   constructor(private twitterService: TwitterService, private activatedRoute: ActivatedRoute, private location: Location) {}
   user: string;
 
+  isCollapsed: boolean = true;
+
+ toggleCollapse(): void {
+   this.isCollapsed = !this.isCollapsed;
+ }
+
   ngOnInit () {
     this.activatedRoute.queryParams.subscribe((params: Params) => {
       if (params['valid']) {
         let user = params['valid'];
         let token = params['token'];
+        let userID = params['userid']
         localStorage.setItem('user', user);
-        localStorage.setItem('token', token)
+        localStorage.setItem('token', token);
+        localStorage.setItem('userID', userID);
         this.user = user;
         this.location.replaceState('');
       }

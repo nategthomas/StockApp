@@ -6,21 +6,387 @@
  /* tslint:disable */
 
 
-import * as import0 from '@angular/core';
-import * as import1 from '../../../node_modules/angular2-chartjs/dist/chart.component.ngfactory';
-import * as import2 from 'angular2-chartjs/dist/chart.component';
+import * as import0 from './mypolls.component.css.shim.ngstyle';
+import * as import1 from '@angular/core';
+import * as import2 from '@angular/forms';
 import * as import3 from './mypolls.component';
-const styles_MypollsComponent:any[] = ([] as any[]);
-export const RenderType_MypollsComponent:import0.RendererType2 = import0.ɵcrt({
-  encapsulation: 2,
+import * as import4 from '@angular/common';
+import * as import5 from '../../../node_modules/angular2-chartjs/dist/chart.component.ngfactory';
+import * as import6 from 'angular2-chartjs/dist/chart.component';
+import * as import7 from '../newpolls/poll.service';
+import * as import8 from '@angular/router';
+import * as import9 from '../errors/error.service';
+const styles_MypollsComponent:any[] = [import0.styles];
+export const RenderType_MypollsComponent:import1.RendererType2 = import1.ɵcrt({
+  encapsulation: 0,
   styles: styles_MypollsComponent,
   data: {}
 }
 );
-export function View_MypollsComponent_0(l:any):import0.ɵViewDefinition {
-  return import0.ɵvid(0,[
-    (l()(),import0.ɵeld(0,(null as any),(null as any),1,'chart',([] as any[]),(null as any),(null as any),(null as any),import1.View_ChartComponent_0,import1.RenderType_ChartComponent)),
-    import0.ɵdid(638976,(null as any),0,import2.ChartComponent,[import0.ElementRef],{
+function View_MypollsComponent_1(l:any):import1.ɵViewDefinition {
+  return import1.ɵvid(0,[
+    (l()(),import1.ɵeld(0,(null as any),(null as any),3,'option',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
+    import1.ɵdid(147456,(null as any),0,import2.NgSelectOption,[
+      import1.ElementRef,
+      import1.Renderer,
+      [
+        8,
+        (null as any)
+      ]
+
+    ]
+    ,(null as any),(null as any)),
+    import1.ɵdid(147456,(null as any),0,import2.ɵq,[
+      import1.ElementRef,
+      import1.Renderer,
+      [
+        8,
+        (null as any)
+      ]
+
+    ]
+    ,(null as any),(null as any)),
+    (l()(),import1.ɵted((null as any),[
+      '',
+      '\n    '
+    ]
+    ))
+  ]
+  ,(null as any),(ck,v) => {
+    const currVal_0:any = v.context.$implicit;
+    ck(v,3,0,currVal_0);
+  });
+}
+function View_MypollsComponent_2(l:any):import1.ɵViewDefinition {
+  return import1.ɵvid(0,[
+    (l()(),import1.ɵeld(0,(null as any),(null as any),1,'button',[
+      [
+        'class',
+        'btn btn-danger'
+      ]
+      ,
+      [
+        'type',
+        'button'
+      ]
+
+    ]
+      ,(null as any),[[
+        (null as any),
+        'click'
+      ]
+    ],(v,en,$event) => {
+      var ad:boolean = true;
+      var co:any = v.component;
+      if (('click' === en)) {
+        const pd_0:any = ((<any>co.onDelete()) !== false);
+        ad = (pd_0 && ad);
+      }
+      return ad;
+    },(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['Delete Poll']))
+  ]
+  ,(null as any),(null as any));
+}
+export function View_MypollsComponent_0(l:any):import1.ɵViewDefinition {
+  return import1.ɵvid(0,[
+    import1.ɵqud(402653184,1,{chartComponent: 0}),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),53,'div',[[
+        'class',
+        'poll-container row'
+      ]
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n  '])),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),41,'div',[[
+        'class',
+        'options col-sm-4'
+      ]
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n    '])),
+    (l()(),import1.ɵeld(0,(null as any),(null as any),1,'div',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),[
+      '',
+      ''
+    ]
+    )),
+    (l()(),import1.ɵted((null as any),['\n'])),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),35,'form',[[
+        'novalidate',
+        ''
+      ]
+    ],[
+      [
+        2,
+        'ng-untouched',
+        (null as any)
+      ]
+      ,
+      [
+        2,
+        'ng-touched',
+        (null as any)
+      ]
+      ,
+      [
+        2,
+        'ng-pristine',
+        (null as any)
+      ]
+      ,
+      [
+        2,
+        'ng-dirty',
+        (null as any)
+      ]
+      ,
+      [
+        2,
+        'ng-valid',
+        (null as any)
+      ]
+      ,
+      [
+        2,
+        'ng-invalid',
+        (null as any)
+      ]
+      ,
+      [
+        2,
+        'ng-pending',
+        (null as any)
+      ]
+
+    ]
+    ,[
+      [
+        (null as any),
+        'submit'
+      ]
+      ,
+      [
+        (null as any),
+        'reset'
+      ]
+
+    ]
+    ,(v,en,$event) => {
+      var ad:boolean = true;
+      if (('submit' === en)) {
+        const pd_0:any = ((<any>import1.ɵnov(v,10).onSubmit($event)) !== false);
+        ad = (pd_0 && ad);
+      }
+      if (('reset' === en)) {
+        const pd_1:any = ((<any>import1.ɵnov(v,10).onReset()) !== false);
+        ad = (pd_1 && ad);
+      }
+      return ad;
+    },(null as any),(null as any))),
+    import1.ɵdid(16384,(null as any),0,import2.ɵbf,([] as any[]),(null as any),(null as any)),
+    import1.ɵdid(16384,(null as any),0,import2.NgForm,[
+      [
+        8,
+        (null as any)
+      ]
+      ,
+      [
+        8,
+        (null as any)
+      ]
+
+    ]
+    ,(null as any),(null as any)),
+    import1.ɵprd(2048,(null as any),import2.ControlContainer,(null as any),[import2.NgForm]),
+    import1.ɵdid(16384,(null as any),0,import2.NgControlStatusGroup,[import2.ControlContainer],(null as any),(null as any)),
+    (l()(),import1.ɵted((null as any),['\n  '])),
+    (l()(),import1.ɵeld(0,(null as any),(null as any),28,'div',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n    '])),
+      (l()(),import1.ɵeld(0,[[
+        'selected',
+        1
+      ]
+      ],(null as any),14,'select',[[
+        'class',
+        'dropdown'
+      ]
+      ],(null as any),[[
+        (null as any),
+        'change'
+      ]
+    ],(v,en,$event) => {
+      var ad:boolean = true;
+      var co:import3.MypollsComponent = v.component;
+      if (('change' === en)) {
+        const pd_0:any = ((<any>co.addCustom(import1.ɵnov(v,16).value)) !== false);
+        ad = (pd_0 && ad);
+      }
+      return ad;
+    },(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n       '])),
+    (l()(),import1.ɵeld(0,(null as any),(null as any),3,'option',[
+      [
+        'disabled',
+        ''
+      ]
+      ,
+      [
+        'hidden',
+        ''
+      ]
+      ,
+      [
+        'selected',
+        ''
+      ]
+      ,
+      [
+        'value',
+        ''
+      ]
+
+    ]
+    ,(null as any),(null as any),(null as any),(null as any),(null as any))),
+    import1.ɵdid(147456,(null as any),0,import2.NgSelectOption,[
+      import1.ElementRef,
+      import1.Renderer,
+      [
+        8,
+        (null as any)
+      ]
+
+    ]
+      ,{value: [
+        0,
+        'value'
+      ]
+    },(null as any)),
+    import1.ɵdid(147456,(null as any),0,import2.ɵq,[
+      import1.ElementRef,
+      import1.Renderer,
+      [
+        8,
+        (null as any)
+      ]
+
+    ]
+      ,{value: [
+        0,
+        'value'
+      ]
+    },(null as any)),
+    (l()(),import1.ɵted((null as any),['Select your option'])),
+    (l()(),import1.ɵted((null as any),['\n      '])),
+    (l()(),import1.ɵand(16777216,(null as any),(null as any),1,(null as any),View_MypollsComponent_1)),
+    import1.ɵdid(802816,(null as any),0,import4.NgForOf,[
+      import1.ViewContainerRef,
+      import1.TemplateRef,
+      import1.IterableDiffers
+    ]
+      ,{ngForOf: [
+        0,
+        'ngForOf'
+      ]
+    },(null as any)),
+    (l()(),import1.ɵted((null as any),['\n    '])),
+    (l()(),import1.ɵeld(0,(null as any),(null as any),3,'option',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
+    import1.ɵdid(147456,(null as any),0,import2.NgSelectOption,[
+      import1.ElementRef,
+      import1.Renderer,
+      [
+        8,
+        (null as any)
+      ]
+
+    ]
+    ,(null as any),(null as any)),
+    import1.ɵdid(147456,(null as any),0,import2.ɵq,[
+      import1.ElementRef,
+      import1.Renderer,
+      [
+        8,
+        (null as any)
+      ]
+
+    ]
+    ,(null as any),(null as any)),
+    (l()(),import1.ɵted((null as any),['\n      Make a custom option\n    '])),
+    (l()(),import1.ɵted((null as any),['\n  '])),
+    (l()(),import1.ɵted((null as any),['\n  '])),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),6,'div',([] as any[]),[[
+        8,
+        'hidden',
+        0
+      ]
+    ],(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n    '])),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),1,'label',[[
+        'for',
+        'custom'
+      ]
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['Add your option: '])),
+    (l()(),import1.ɵted((null as any),['\n    '])),
+      (l()(),import1.ɵeld(0,[[
+        'custom',
+        1
+      ]
+      ],(null as any),0,'input',[[
+        'id',
+        'custom'
+      ]
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n  '])),
+    (l()(),import1.ɵted((null as any),['\n  '])),
+    (l()(),import1.ɵeld(0,(null as any),(null as any),1,'button',[
+      [
+        'class',
+        'btn btn-primary dropdown submit'
+      ]
+      ,
+      [
+        'type',
+        'button'
+      ]
+
+    ]
+      ,(null as any),[[
+        (null as any),
+        'click'
+      ]
+    ],(v,en,$event) => {
+      var ad:boolean = true;
+      var co:import3.MypollsComponent = v.component;
+      if (('click' === en)) {
+        const pd_0:any = ((<any>co.onclick(import1.ɵnov(v,16).value,import1.ɵnov(v,37).value)) !== false);
+        ad = (pd_0 && ad);
+      }
+      return ad;
+    },(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['Submit\n  '])),
+    (l()(),import1.ɵted((null as any),['\n\n  '])),
+    (l()(),import1.ɵted((null as any),['\n'])),
+    (l()(),import1.ɵted((null as any),['\n  '])),
+    (l()(),import1.ɵted((null as any),['\n  '])),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),7,'div',[[
+        'class',
+        'chart-container col-sm-8'
+      ]
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import1.ɵted((null as any),['\n    '])),
+    (l()(),import1.ɵeld(0,(null as any),(null as any),1,'chart',([] as any[]),(null as any),(null as any),(null as any),import5.View_ChartComponent_0,import5.RenderType_ChartComponent)),
+    import1.ɵdid(638976,[
+      [
+        1,
+        4
+      ]
+      ,
+      [
+        'c',
+        4
+      ]
+
+    ]
+    ,0,import6.ChartComponent,[import1.ElementRef],{
       type: [
         0,
         'type'
@@ -37,22 +403,66 @@ export function View_MypollsComponent_0(l:any):import0.ɵViewDefinition {
       ]
 
     }
-    ,(null as any))
+    ,(null as any)),
+    (l()(),import1.ɵted((null as any),['\n    '])),
+    (l()(),import1.ɵand(16777216,(null as any),(null as any),1,(null as any),View_MypollsComponent_2)),
+    import1.ɵdid(16384,(null as any),0,import4.NgIf,[
+      import1.ViewContainerRef,
+      import1.TemplateRef
+    ]
+      ,{ngIf: [
+        0,
+        'ngIf'
+      ]
+    },(null as any)),
+    (l()(),import1.ɵted((null as any),['\n  '])),
+    (l()(),import1.ɵted((null as any),['\n'])),
+    (l()(),import1.ɵted((null as any),['\n']))
   ]
   ,(ck,v) => {
     var co:import3.MypollsComponent = v.component;
-    const currVal_0:any = co.type;
-    const currVal_1:any = co.data;
-    const currVal_2:any = co.options;
-    ck(v,1,0,currVal_0,currVal_1,currVal_2);
+    const currVal_8:any = '';
+    ck(v,19,0,currVal_8);
+    const currVal_9:any = '';
+    ck(v,20,0,currVal_9);
+    const currVal_10:any = ((co.poll == null)? (null as any): co.poll.options);
+    ck(v,24,0,currVal_10);
+    const currVal_12:any = co.type;
+    const currVal_13:any = co.data;
+    const currVal_14:any = co.options;
+    ck(v,49,0,currVal_12,currVal_13,currVal_14);
+    const currVal_15:any = co.Creator();
+    ck(v,52,0,currVal_15);
+  },(ck,v) => {
+    var co:import3.MypollsComponent = v.component;
+    const currVal_0:any = ((co.poll == null)? (null as any): co.poll.title);
+    ck(v,6,0,currVal_0);
+    const currVal_1:any = import1.ɵnov(v,12).ngClassUntouched;
+    const currVal_2:any = import1.ɵnov(v,12).ngClassTouched;
+    const currVal_3:any = import1.ɵnov(v,12).ngClassPristine;
+    const currVal_4:any = import1.ɵnov(v,12).ngClassDirty;
+    const currVal_5:any = import1.ɵnov(v,12).ngClassValid;
+    const currVal_6:any = import1.ɵnov(v,12).ngClassInvalid;
+    const currVal_7:any = import1.ɵnov(v,12).ngClassPending;
+    ck(v,8,0,currVal_1,currVal_2,currVal_3,currVal_4,currVal_5,currVal_6,currVal_7);
+    const currVal_11:boolean = !co.getCustomTrue();
+    ck(v,32,0,currVal_11);
+  });
+}
+function View_MypollsComponent_Host_0(l:any):import1.ɵViewDefinition {
+  return import1.ɵvid(0,[
+    (l()(),import1.ɵeld(0,(null as any),(null as any),1,'app-mypolls',([] as any[]),(null as any),(null as any),(null as any),View_MypollsComponent_0,RenderType_MypollsComponent)),
+    import1.ɵdid(114688,(null as any),0,import3.MypollsComponent,[
+      import7.PollService,
+      import8.ActivatedRoute,
+      import8.Router,
+      import9.ErrorService
+    ]
+    ,(null as any),(null as any))
+  ]
+  ,(ck,v) => {
+    ck(v,1,0);
   },(null as any));
 }
-function View_MypollsComponent_Host_0(l:any):import0.ɵViewDefinition {
-  return import0.ɵvid(0,[
-    (l()(),import0.ɵeld(0,(null as any),(null as any),1,'app-mypolls',([] as any[]),(null as any),(null as any),(null as any),View_MypollsComponent_0,RenderType_MypollsComponent)),
-    import0.ɵdid(49152,(null as any),0,import3.MypollsComponent,([] as any[]),(null as any),(null as any))
-  ]
-  ,(null as any),(null as any));
-}
-export const MypollsComponentNgFactory:import0.ComponentFactory<import3.MypollsComponent> = import0.ɵccf('app-mypolls',import3.MypollsComponent,View_MypollsComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL215cG9sbHMvbXlwb2xscy5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL215cG9sbHMvbXlwb2xscy5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9uZ3Roby9Eb2N1bWVudHMvSmF2YVNjcmlwdC9Wb3RpbmdfYXBwL2Fzc2V0cy9hcHAvbXlwb2xscy9teXBvbGxzLmNvbXBvbmVudC50cy5NeXBvbGxzQ29tcG9uZW50Lmh0bWwiLCJuZzovLy9DOi9Vc2Vycy9uZ3Roby9Eb2N1bWVudHMvSmF2YVNjcmlwdC9Wb3RpbmdfYXBwL2Fzc2V0cy9hcHAvbXlwb2xscy9teXBvbGxzLmNvbXBvbmVudC50cy5NeXBvbGxzQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGNoYXJ0IFt0eXBlXT1cInR5cGVcIiBbZGF0YV09XCJkYXRhXCIgW29wdGlvbnNdPVwib3B0aW9uc1wiPjwvY2hhcnQ+IiwiPGFwcC1teXBvbGxzPjwvYXBwLW15cG9sbHM+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lDQUE7Z0JBQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBOzs7O0lBQU87SUFBYztJQUFjO0lBQW5DLFNBQU8sVUFBYyxVQUFjLFNBQW5DOzs7OztJQ0FBO2dCQUFBOzs7OyJ9
+export const MypollsComponentNgFactory:import1.ComponentFactory<import3.MypollsComponent> = import1.ɵccf('app-mypolls',import3.MypollsComponent,View_MypollsComponent_Host_0,{},{},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL215cG9sbHMvbXlwb2xscy5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL215cG9sbHMvbXlwb2xscy5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9uZ3Roby9Eb2N1bWVudHMvSmF2YVNjcmlwdC9Wb3RpbmdfYXBwL2Fzc2V0cy9hcHAvbXlwb2xscy9teXBvbGxzLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL215cG9sbHMvbXlwb2xscy5jb21wb25lbnQudHMuTXlwb2xsc0NvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxkaXYgY2xhc3M9XCJwb2xsLWNvbnRhaW5lciByb3dcIj5cbiAgPGRpdiBjbGFzcz1cIm9wdGlvbnMgY29sLXNtLTRcIj5cbiAgICA8ZGl2Pnt7cG9sbD8udGl0bGV9fTwvZGl2PlxuPGZvcm0+XG4gIDxkaXY+XG4gICAgPHNlbGVjdCAjc2VsZWN0ZWQgY2xhc3M9XCJkcm9wZG93blwiICAgKGNoYW5nZSk9XCJhZGRDdXN0b20oc2VsZWN0ZWQudmFsdWUpXCI+XG4gICAgICAgPG9wdGlvbiB2YWx1ZT1cIlwiIGRpc2FibGVkIHNlbGVjdGVkIGhpZGRlbj5TZWxlY3QgeW91ciBvcHRpb248L29wdGlvbj5cbiAgICAgIDxvcHRpb25cbiAgICAgICpuZ0Zvcj1cImxldCBvcHRpb24gb2YgcG9sbD8ub3B0aW9uczsgbGV0IGkgPSBpbmRleFwiXG4gICAgICA+e3tvcHRpb259fVxuICAgIDwvb3B0aW9uPlxuICAgIDxvcHRpb24+XG4gICAgICBNYWtlIGEgY3VzdG9tIG9wdGlvblxuICAgIDwvb3B0aW9uPlxuICA8L3NlbGVjdD5cbiAgPGRpdiBbaGlkZGVuXT1cIiFnZXRDdXN0b21UcnVlKClcIj5cbiAgICA8bGFiZWwgZm9yPVwiY3VzdG9tXCIgPkFkZCB5b3VyIG9wdGlvbjogPC9sYWJlbD5cbiAgICA8aW5wdXRcbiAgICBpZD1cImN1c3RvbVwiXG4gICAgI2N1c3RvbVxuICAgID5cbiAgPC9kaXY+XG4gIDxidXR0b25cbiAgdHlwZT1cImJ1dHRvblwiXG4gIGNsYXNzPVwiYnRuIGJ0bi1wcmltYXJ5IGRyb3Bkb3duIHN1Ym1pdFwiXG4gIChjbGljayk9XCJvbmNsaWNrKHNlbGVjdGVkLnZhbHVlLCBjdXN0b20udmFsdWUpXCJcbiAgPlN1Ym1pdFxuICA8L2J1dHRvbj5cblxuICA8L2Rpdj5cbjwvZm9ybT5cbiAgPC9kaXY+XG4gIDxkaXYgY2xhc3M9XCJjaGFydC1jb250YWluZXIgY29sLXNtLThcIj5cbiAgICA8Y2hhcnQgI2MgW3R5cGVdPVwidHlwZVwiIFtkYXRhXT1cImRhdGFcIiBbb3B0aW9uc109XCJvcHRpb25zXCI+PC9jaGFydD5cbiAgICA8YnV0dG9uICpuZ0lmPVwiQ3JlYXRvcigpXCIgdHlwZT1cImJ1dHRvblwiIGNsYXNzPVwiYnRuIGJ0bi1kYW5nZXJcIiAoY2xpY2spPVwib25EZWxldGUoKVwiID5EZWxldGUgUG9sbDwvYnV0dG9uPlxuICA8L2Rpdj5cbjwvZGl2PlxuIiwiPGFwcC1teXBvbGxzPjwvYXBwLW15cG9sbHM+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lDT007Z0JBQUE7OztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7Z0JBQUE7OztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7SUFFQztNQUFBO01BQUE7SUFBQTtJQUFBOzs7SUFBQTtJQUFBOzs7OztJQXlCSDtNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO01BQUE7TUFBK0Q7UUFBQTtRQUFBO01BQUE7TUFBL0Q7SUFBQTtJQUFxRjs7Ozs7OztNQWxDekY7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUFnQztNQUM5QjtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQThCO0lBQzVCO0lBQUs7TUFBQTtNQUFBO0lBQUE7SUFBQTtJQUFxQjtNQUM5QjtRQUFBO1FBQUE7TUFBQTtJQUFBO01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtNQUFBO0lBQUE7Z0JBQUE7Z0JBQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO2dCQUFBO2dCQUFBO0lBQU07SUFDSjtJQUFLO01BQ0g7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtNQUFBO01BQXFDO1FBQUE7UUFBQTtNQUFBO01BQXJDO0lBQUE7SUFBMEU7SUFDdkU7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO2dCQUFBOzs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7Z0JBQUE7OztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUEwQztJQUEyQjtJQUN0RTtnQkFBQTs7OztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUdPO0lBQ1Q7Z0JBQUE7OztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7Z0JBQUE7OztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7SUFBUTtJQUVDO0lBQ0Y7TUFDVDtRQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBaUM7TUFDL0I7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUFxQjtJQUF5QjtNQUM5QztRQUFBO1FBQUE7TUFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFHQztJQUNHO0lBQ047TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtNQUFBO01BR0E7UUFBQTtRQUFBO01BQUE7TUFIQTtJQUFBO0lBSUM7SUFDUTtJQUVIO0lBQ0Q7SUFDQztNQUNOO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBc0M7SUFDcEM7Z0JBQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtJQUFrRTtJQUNsRTtnQkFBQTs7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQXlHO0lBQ3JHO0lBQ0Y7Ozs7SUE5QlM7SUFBUixVQUFRLFNBQVI7SUFBUTtJQUFSLFVBQVEsU0FBUjtJQUVEO0lBREEsVUFDQSxVQURBO0lBMEJRO0lBQWM7SUFBYztJQUF0QyxVQUFVLFdBQWMsV0FBYyxVQUF0QztJQUNRO0lBQVIsVUFBUSxVQUFSOzs7SUFoQ0s7SUFBQTtJQUNUO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUEsU0FBQSxxRUFBQTtJQVlPO0lBQUwsVUFBSyxVQUFMOzs7OztJQ2ZGO2dCQUFBOzs7OztJQUFBO0tBQUE7OztJQUFBOzs7In0=
