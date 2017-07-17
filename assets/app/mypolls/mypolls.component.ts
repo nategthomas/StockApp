@@ -82,15 +82,10 @@ export class MypollsComponent implements OnInit {
   }
 
   onclick(defaults, custom) {
-    if (custom === "") {
-      console.log('yes');
-
-    }
     if ((defaults !== "Make a custom option") && (defaults !== "")) {
       var index = this.poll.options.indexOf(defaults);
       this.pollService.addVote(index, this.poll)
       .subscribe((vote: Poll) => {
-        console.log("hey");
         this.poll = vote;
         this.data.datasets[0].data = vote.votes;
         this.data.labels = vote.options;
