@@ -1,6 +1,6 @@
 .navbar {
   background-color: #f8f8f8;
-;
+  min-width: 220px;
 }
 
 .btn-Twitter {

@@ -27,7 +27,7 @@ SinglePoll = __decorate([
     Component({
         selector: 'app-singlepoll',
         templateUrl: './singlepoll.component.html',
-        styles: ["\n    .well {\n      background-color:  white;\n    }\n    .titular {\n      text-align: center;\n      font-size: 1.25em;\n      color: #42ab9e;\n    }\n    .titular:hover {\n      cursor: pointer;\n    }\n    "]
+        styles: ["\n    .well {\n      background-color:  white;\n    }\n    .titular {\n      text-align: center;\n      font-size: 1.25em;\n      color: #42ab9e;\n    }\n    .titular:hover {\n      cursor: pointer;\n      background-color: #e7e7e7;\n    }\n    "]
     }),
     __metadata("design:paramtypes", [PollService])
 ], SinglePoll);

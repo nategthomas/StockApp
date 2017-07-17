@@ -41,7 +41,7 @@ function View_MypollsComponent_1(l) {
         ], null, null),
         (l()(), import1.ɵted(null, [
             '',
-            '\n    '
+            '\n        '
         ]))
     ], null, function (ck, v) {
         var currVal_0 = v.context.$implicit;
@@ -93,9 +93,9 @@ export function View_MypollsComponent_0(l) {
         (l()(), import1.ɵeld(0, null, null, 1, 'div', [], null, null, null, null, null)),
         (l()(), import1.ɵted(null, [
             '',
-            ''
+            '\n    '
         ])),
-        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n    '])),
         (l()(), import1.ɵeld(0, null, null, 35, 'form', [[
                 'novalidate',
                 ''
@@ -170,9 +170,9 @@ export function View_MypollsComponent_0(l) {
         ], null, null),
         import1.ɵprd(2048, null, import2.ControlContainer, null, [import2.NgForm]),
         import1.ɵdid(16384, null, 0, import2.NgControlStatusGroup, [import2.ControlContainer], null, null),
-        (l()(), import1.ɵted(null, ['\n  '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
         (l()(), import1.ɵeld(0, null, null, 28, 'div', [], null, null, null, null, null)),
-        (l()(), import1.ɵted(null, ['\n    '])),
+        (l()(), import1.ɵted(null, ['\n        '])),
         (l()(), import1.ɵeld(0, [[
                 'selected',
                 1
@@ -194,7 +194,7 @@ export function View_MypollsComponent_0(l) {
             }
             return ad;
         }, null, null)),
-        (l()(), import1.ɵted(null, ['\n       '])),
+        (l()(), import1.ɵted(null, ['\n           '])),
         (l()(), import1.ɵeld(0, null, null, 3, 'option', [
             [
                 'disabled',
@@ -238,7 +238,7 @@ export function View_MypollsComponent_0(l) {
             ]
         }, null),
         (l()(), import1.ɵted(null, ['Select your option'])),
-        (l()(), import1.ɵted(null, ['\n      '])),
+        (l()(), import1.ɵted(null, ['\n          '])),
         (l()(), import1.ɵand(16777216, null, null, 1, null, View_MypollsComponent_1)),
         import1.ɵdid(802816, null, 0, import4.NgForOf, [
             import1.ViewContainerRef,
@@ -249,7 +249,7 @@ export function View_MypollsComponent_0(l) {
                 'ngForOf'
             ]
         }, null),
-        (l()(), import1.ɵted(null, ['\n    '])),
+        (l()(), import1.ɵted(null, ['\n        '])),
         (l()(), import1.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)),
         import1.ɵdid(147456, null, 0, import2.NgSelectOption, [
             import1.ElementRef,
@@ -267,23 +267,23 @@ export function View_MypollsComponent_0(l) {
                 null
             ]
         ], null, null),
-        (l()(), import1.ɵted(null, ['\n      Make a custom option\n    '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
+        (l()(), import1.ɵted(null, ['\n          Make a custom option\n        '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
         (l()(), import1.ɵeld(0, null, null, 6, 'div', [], [[
                 8,
                 'hidden',
                 0
             ]
         ], null, null, null, null)),
-        (l()(), import1.ɵted(null, ['\n    '])),
+        (l()(), import1.ɵted(null, ['\n        '])),
         (l()(), import1.ɵeld(0, null, null, 1, 'label', [[
                 'for',
                 'custom'
             ]
         ], null, null, null, null, null)),
         (l()(), import1.ɵted(null, ['Add your option: '])),
-        (l()(), import1.ɵted(null, ['\n    '])),
+        (l()(), import1.ɵted(null, ['\n        '])),
         (l()(), import1.ɵeld(0, [[
                 'custom',
                 1
@@ -293,8 +293,8 @@ export function View_MypollsComponent_0(l) {
                 'custom'
             ]
         ], null, null, null, null, null)),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
         (l()(), import1.ɵeld(0, null, null, 1, 'button', [
             [
                 'class',
@@ -317,9 +317,9 @@ export function View_MypollsComponent_0(l) {
             }
             return ad;
         }, null, null)),
-        (l()(), import1.ɵted(null, ['Submit\n  '])),
-        (l()(), import1.ɵted(null, ['\n\n  '])),
-        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['Submit\n      '])),
+        (l()(), import1.ɵted(null, ['\n\n      '])),
+        (l()(), import1.ɵted(null, ['\n    '])),
         (l()(), import1.ɵted(null, ['\n  '])),
         (l()(), import1.ɵted(null, ['\n  '])),
         (l()(), import1.ɵeld(0, null, null, 7, 'div', [[

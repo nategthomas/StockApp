@@ -18,6 +18,7 @@ import {PollService} from "../newpolls/poll.service";
     }
     .titular:hover {
       cursor: pointer;
+      background-color: #e7e7e7;
     }
     `]
 })

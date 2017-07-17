@@ -14,6 +14,7 @@ var TwitterService = (function () {
     function TwitterService(http) {
         this.http = http;
         this.url = 'https://voter-app1.herokuapp.com';
+        this.url1 = 'http://localhost:3000';
     }
     TwitterService.prototype.signIn = function () {
         window.location.href = this.url + "/twitter/login";

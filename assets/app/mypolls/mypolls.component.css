@@ -1,11 +1,12 @@
 .chart-container {
   height: 500px;
-  width: 650px;
+
 }
 .poll-container {
   padding: 20px;
   background-color: #eee;
   margin: 0px;
+  min-width: 480px;
 }
 .options {
   font-size: 1.3em;
@@ -21,8 +22,13 @@ button {
 .submit {
   background-color: #42ab9e;
   border-color: #42ab9e;
-
 }
+
+.submit:hover {
+  background-color: rgba(66,171,158, .8);
+  border-color: rgba(66,171,158, .8);
+}
+
 
 select {
   width: 100%;

@@ -9,7 +9,7 @@
 import * as import0 from '@angular/core';
 import * as import1 from './singlepoll.component';
 import * as import2 from '../newpolls/poll.service';
-const styles_SinglePoll:any[] = ['.well[_ngcontent-%COMP%] {\n      background-color:  white;\n    }\n    .titular[_ngcontent-%COMP%] {\n      text-align: center;\n      font-size: 1.25em;\n      color: #42ab9e;\n    }\n    .titular[_ngcontent-%COMP%]:hover {\n      cursor: pointer;\n    }'];
+const styles_SinglePoll:any[] = ['.well[_ngcontent-%COMP%] {\n      background-color:  white;\n    }\n    .titular[_ngcontent-%COMP%] {\n      text-align: center;\n      font-size: 1.25em;\n      color: #42ab9e;\n    }\n    .titular[_ngcontent-%COMP%]:hover {\n      cursor: pointer;\n      background-color: #e7e7e7;\n    }'];
 export const RenderType_SinglePoll:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 0,
   styles: styles_SinglePoll,

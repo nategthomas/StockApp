@@ -23,6 +23,7 @@ var PollService = (function () {
         this.polls = [];
         this.pollisClicked = new Subject();
         this.url = 'https://voter-app1.herokuapp.com';
+        this.url1 = 'http://localhost:3000';
     }
     PollService.prototype.clickedPoll = function (poll) {
         this.pollisClicked.next(poll);

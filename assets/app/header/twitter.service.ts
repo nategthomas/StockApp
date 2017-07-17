@@ -9,6 +9,7 @@ export class TwitterService {
   constructor(private http: Http) {}
 
   private url: string = 'https://voter-app1.herokuapp.com';
+  private url1: string = 'http://localhost:3000';
 
   signIn() {
     window.location.href = this.url + "/twitter/login";

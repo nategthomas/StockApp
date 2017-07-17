@@ -48,7 +48,7 @@ function View_MypollsComponent_1(l:any):import1.ɵViewDefinition {
     ,(null as any),(null as any)),
     (l()(),import1.ɵted((null as any),[
       '',
-      '\n    '
+      '\n        '
     ]
     ))
   ]
@@ -106,10 +106,10 @@ export function View_MypollsComponent_0(l:any):import1.ɵViewDefinition {
     (l()(),import1.ɵeld(0,(null as any),(null as any),1,'div',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
     (l()(),import1.ɵted((null as any),[
       '',
-      ''
+      '\n    '
     ]
     )),
-    (l()(),import1.ɵted((null as any),['\n'])),
+    (l()(),import1.ɵted((null as any),['\n    '])),
       (l()(),import1.ɵeld(0,(null as any),(null as any),35,'form',[[
         'novalidate',
         ''
@@ -198,9 +198,9 @@ export function View_MypollsComponent_0(l:any):import1.ɵViewDefinition {
     ,(null as any),(null as any)),
     import1.ɵprd(2048,(null as any),import2.ControlContainer,(null as any),[import2.NgForm]),
     import1.ɵdid(16384,(null as any),0,import2.NgControlStatusGroup,[import2.ControlContainer],(null as any),(null as any)),
-    (l()(),import1.ɵted((null as any),['\n  '])),
+    (l()(),import1.ɵted((null as any),['\n      '])),
     (l()(),import1.ɵeld(0,(null as any),(null as any),28,'div',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
-    (l()(),import1.ɵted((null as any),['\n    '])),
+    (l()(),import1.ɵted((null as any),['\n        '])),
       (l()(),import1.ɵeld(0,[[
         'selected',
         1
@@ -222,7 +222,7 @@ export function View_MypollsComponent_0(l:any):import1.ɵViewDefinition {
       }
       return ad;
     },(null as any),(null as any))),
-    (l()(),import1.ɵted((null as any),['\n       '])),
+    (l()(),import1.ɵted((null as any),['\n           '])),
     (l()(),import1.ɵeld(0,(null as any),(null as any),3,'option',[
       [
         'disabled',
@@ -275,7 +275,7 @@ export function View_MypollsComponent_0(l:any):import1.ɵViewDefinition {
       ]
     },(null as any)),
     (l()(),import1.ɵted((null as any),['Select your option'])),
-    (l()(),import1.ɵted((null as any),['\n      '])),
+    (l()(),import1.ɵted((null as any),['\n          '])),
     (l()(),import1.ɵand(16777216,(null as any),(null as any),1,(null as any),View_MypollsComponent_1)),
     import1.ɵdid(802816,(null as any),0,import4.NgForOf,[
       import1.ViewContainerRef,
@@ -287,7 +287,7 @@ export function View_MypollsComponent_0(l:any):import1.ɵViewDefinition {
         'ngForOf'
       ]
     },(null as any)),
-    (l()(),import1.ɵted((null as any),['\n    '])),
+    (l()(),import1.ɵted((null as any),['\n        '])),
     (l()(),import1.ɵeld(0,(null as any),(null as any),3,'option',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
     import1.ɵdid(147456,(null as any),0,import2.NgSelectOption,[
       import1.ElementRef,
@@ -309,23 +309,23 @@ export function View_MypollsComponent_0(l:any):import1.ɵViewDefinition {
 
     ]
     ,(null as any),(null as any)),
-    (l()(),import1.ɵted((null as any),['\n      Make a custom option\n    '])),
-    (l()(),import1.ɵted((null as any),['\n  '])),
-    (l()(),import1.ɵted((null as any),['\n  '])),
+    (l()(),import1.ɵted((null as any),['\n          Make a custom option\n        '])),
+    (l()(),import1.ɵted((null as any),['\n      '])),
+    (l()(),import1.ɵted((null as any),['\n      '])),
       (l()(),import1.ɵeld(0,(null as any),(null as any),6,'div',([] as any[]),[[
         8,
         'hidden',
         0
       ]
     ],(null as any),(null as any),(null as any),(null as any))),
-    (l()(),import1.ɵted((null as any),['\n    '])),
+    (l()(),import1.ɵted((null as any),['\n        '])),
       (l()(),import1.ɵeld(0,(null as any),(null as any),1,'label',[[
         'for',
         'custom'
       ]
     ],(null as any),(null as any),(null as any),(null as any),(null as any))),
     (l()(),import1.ɵted((null as any),['Add your option: '])),
-    (l()(),import1.ɵted((null as any),['\n    '])),
+    (l()(),import1.ɵted((null as any),['\n        '])),
       (l()(),import1.ɵeld(0,[[
         'custom',
         1
@@ -335,8 +335,8 @@ export function View_MypollsComponent_0(l:any):import1.ɵViewDefinition {
         'custom'
       ]
     ],(null as any),(null as any),(null as any),(null as any),(null as any))),
-    (l()(),import1.ɵted((null as any),['\n  '])),
-    (l()(),import1.ɵted((null as any),['\n  '])),
+    (l()(),import1.ɵted((null as any),['\n      '])),
+    (l()(),import1.ɵted((null as any),['\n      '])),
     (l()(),import1.ɵeld(0,(null as any),(null as any),1,'button',[
       [
         'class',
@@ -362,9 +362,9 @@ export function View_MypollsComponent_0(l:any):import1.ɵViewDefinition {
       }
       return ad;
     },(null as any),(null as any))),
-    (l()(),import1.ɵted((null as any),['Submit\n  '])),
-    (l()(),import1.ɵted((null as any),['\n\n  '])),
-    (l()(),import1.ɵted((null as any),['\n'])),
+    (l()(),import1.ɵted((null as any),['Submit\n      '])),
+    (l()(),import1.ɵted((null as any),['\n\n      '])),
+    (l()(),import1.ɵted((null as any),['\n    '])),
     (l()(),import1.ɵted((null as any),['\n  '])),
     (l()(),import1.ɵted((null as any),['\n  '])),
       (l()(),import1.ɵeld(0,(null as any),(null as any),7,'div',[[
@@ -465,4 +465,4 @@ function View_MypollsComponent_Host_0(l:any):import1.ɵViewDefinition {
   },(null as any));
 }
 export const MypollsComponentNgFactory:import1.ComponentFactory<import3.MypollsComponent> = import1.ɵccf('app-mypolls',import3.MypollsComponent,View_MypollsComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL215cG9sbHMvbXlwb2xscy5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL215cG9sbHMvbXlwb2xscy5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9uZ3Roby9Eb2N1bWVudHMvSmF2YVNjcmlwdC9Wb3RpbmdfYXBwL2Fzc2V0cy9hcHAvbXlwb2xscy9teXBvbGxzLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL215cG9sbHMvbXlwb2xscy5jb21wb25lbnQudHMuTXlwb2xsc0NvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxkaXYgY2xhc3M9XCJwb2xsLWNvbnRhaW5lciByb3dcIj5cbiAgPGRpdiBjbGFzcz1cIm9wdGlvbnMgY29sLXNtLTRcIj5cbiAgICA8ZGl2Pnt7cG9sbD8udGl0bGV9fTwvZGl2PlxuPGZvcm0+XG4gIDxkaXY+XG4gICAgPHNlbGVjdCAjc2VsZWN0ZWQgY2xhc3M9XCJkcm9wZG93blwiICAgKGNoYW5nZSk9XCJhZGRDdXN0b20oc2VsZWN0ZWQudmFsdWUpXCI+XG4gICAgICAgPG9wdGlvbiB2YWx1ZT1cIlwiIGRpc2FibGVkIHNlbGVjdGVkIGhpZGRlbj5TZWxlY3QgeW91ciBvcHRpb248L29wdGlvbj5cbiAgICAgIDxvcHRpb25cbiAgICAgICpuZ0Zvcj1cImxldCBvcHRpb24gb2YgcG9sbD8ub3B0aW9uczsgbGV0IGkgPSBpbmRleFwiXG4gICAgICA+e3tvcHRpb259fVxuICAgIDwvb3B0aW9uPlxuICAgIDxvcHRpb24+XG4gICAgICBNYWtlIGEgY3VzdG9tIG9wdGlvblxuICAgIDwvb3B0aW9uPlxuICA8L3NlbGVjdD5cbiAgPGRpdiBbaGlkZGVuXT1cIiFnZXRDdXN0b21UcnVlKClcIj5cbiAgICA8bGFiZWwgZm9yPVwiY3VzdG9tXCIgPkFkZCB5b3VyIG9wdGlvbjogPC9sYWJlbD5cbiAgICA8aW5wdXRcbiAgICBpZD1cImN1c3RvbVwiXG4gICAgI2N1c3RvbVxuICAgID5cbiAgPC9kaXY+XG4gIDxidXR0b25cbiAgdHlwZT1cImJ1dHRvblwiXG4gIGNsYXNzPVwiYnRuIGJ0bi1wcmltYXJ5IGRyb3Bkb3duIHN1Ym1pdFwiXG4gIChjbGljayk9XCJvbmNsaWNrKHNlbGVjdGVkLnZhbHVlLCBjdXN0b20udmFsdWUpXCJcbiAgPlN1Ym1pdFxuICA8L2J1dHRvbj5cblxuICA8L2Rpdj5cbjwvZm9ybT5cbiAgPC9kaXY+XG4gIDxkaXYgY2xhc3M9XCJjaGFydC1jb250YWluZXIgY29sLXNtLThcIj5cbiAgICA8Y2hhcnQgI2MgW3R5cGVdPVwidHlwZVwiIFtkYXRhXT1cImRhdGFcIiBbb3B0aW9uc109XCJvcHRpb25zXCI+PC9jaGFydD5cbiAgICA8YnV0dG9uICpuZ0lmPVwiQ3JlYXRvcigpXCIgdHlwZT1cImJ1dHRvblwiIGNsYXNzPVwiYnRuIGJ0bi1kYW5nZXJcIiAoY2xpY2spPVwib25EZWxldGUoKVwiID5EZWxldGUgUG9sbDwvYnV0dG9uPlxuICA8L2Rpdj5cbjwvZGl2PlxuIiwiPGFwcC1teXBvbGxzPjwvYXBwLW15cG9sbHM+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lDT007Z0JBQUE7OztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7Z0JBQUE7OztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7SUFFQztNQUFBO01BQUE7SUFBQTtJQUFBOzs7SUFBQTtJQUFBOzs7OztJQXlCSDtNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO01BQUE7TUFBK0Q7UUFBQTtRQUFBO01BQUE7TUFBL0Q7SUFBQTtJQUFxRjs7Ozs7OztNQWxDekY7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUFnQztNQUM5QjtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQThCO0lBQzVCO0lBQUs7TUFBQTtNQUFBO0lBQUE7SUFBQTtJQUFxQjtNQUM5QjtRQUFBO1FBQUE7TUFBQTtJQUFBO01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtNQUFBO0lBQUE7Z0JBQUE7Z0JBQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO2dCQUFBO2dCQUFBO0lBQU07SUFDSjtJQUFLO01BQ0g7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtNQUFBO01BQXFDO1FBQUE7UUFBQTtNQUFBO01BQXJDO0lBQUE7SUFBMEU7SUFDdkU7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO2dCQUFBOzs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7Z0JBQUE7OztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUEwQztJQUEyQjtJQUN0RTtnQkFBQTs7OztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUdPO0lBQ1Q7Z0JBQUE7OztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7Z0JBQUE7OztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7SUFBUTtJQUVDO0lBQ0Y7TUFDVDtRQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBaUM7TUFDL0I7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUFxQjtJQUF5QjtNQUM5QztRQUFBO1FBQUE7TUFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFHQztJQUNHO0lBQ047TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtNQUFBO01BR0E7UUFBQTtRQUFBO01BQUE7TUFIQTtJQUFBO0lBSUM7SUFDUTtJQUVIO0lBQ0Q7SUFDQztNQUNOO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBc0M7SUFDcEM7Z0JBQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtJQUFrRTtJQUNsRTtnQkFBQTs7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQXlHO0lBQ3JHO0lBQ0Y7Ozs7SUE5QlM7SUFBUixVQUFRLFNBQVI7SUFBUTtJQUFSLFVBQVEsU0FBUjtJQUVEO0lBREEsVUFDQSxVQURBO0lBMEJRO0lBQWM7SUFBYztJQUF0QyxVQUFVLFdBQWMsV0FBYyxVQUF0QztJQUNRO0lBQVIsVUFBUSxVQUFSOzs7SUFoQ0s7SUFBQTtJQUNUO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUEsU0FBQSxxRUFBQTtJQVlPO0lBQUwsVUFBSyxVQUFMOzs7OztJQ2ZGO2dCQUFBOzs7OztJQUFBO0tBQUE7OztJQUFBOzs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL215cG9sbHMvbXlwb2xscy5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL215cG9sbHMvbXlwb2xscy5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9uZ3Roby9Eb2N1bWVudHMvSmF2YVNjcmlwdC9Wb3RpbmdfYXBwL2Fzc2V0cy9hcHAvbXlwb2xscy9teXBvbGxzLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL215cG9sbHMvbXlwb2xscy5jb21wb25lbnQudHMuTXlwb2xsc0NvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxkaXYgY2xhc3M9XCJwb2xsLWNvbnRhaW5lciByb3dcIj5cbiAgPGRpdiBjbGFzcz1cIm9wdGlvbnMgY29sLXNtLTRcIj5cbiAgICA8ZGl2Pnt7cG9sbD8udGl0bGV9fVxuICAgIDwvZGl2PlxuICAgIDxmb3JtPlxuICAgICAgPGRpdj5cbiAgICAgICAgPHNlbGVjdCAjc2VsZWN0ZWQgY2xhc3M9XCJkcm9wZG93blwiICAgKGNoYW5nZSk9XCJhZGRDdXN0b20oc2VsZWN0ZWQudmFsdWUpXCI+XG4gICAgICAgICAgIDxvcHRpb24gdmFsdWU9XCJcIiBkaXNhYmxlZCBzZWxlY3RlZCBoaWRkZW4+U2VsZWN0IHlvdXIgb3B0aW9uPC9vcHRpb24+XG4gICAgICAgICAgPG9wdGlvblxuICAgICAgICAgICpuZ0Zvcj1cImxldCBvcHRpb24gb2YgcG9sbD8ub3B0aW9uczsgbGV0IGkgPSBpbmRleFwiXG4gICAgICAgICAgPnt7b3B0aW9ufX1cbiAgICAgICAgPC9vcHRpb24+XG4gICAgICAgIDxvcHRpb24+XG4gICAgICAgICAgTWFrZSBhIGN1c3RvbSBvcHRpb25cbiAgICAgICAgPC9vcHRpb24+XG4gICAgICA8L3NlbGVjdD5cbiAgICAgIDxkaXYgW2hpZGRlbl09XCIhZ2V0Q3VzdG9tVHJ1ZSgpXCI+XG4gICAgICAgIDxsYWJlbCBmb3I9XCJjdXN0b21cIiA+QWRkIHlvdXIgb3B0aW9uOiA8L2xhYmVsPlxuICAgICAgICA8aW5wdXRcbiAgICAgICAgaWQ9XCJjdXN0b21cIlxuICAgICAgICAjY3VzdG9tXG4gICAgICAgID5cbiAgICAgIDwvZGl2PlxuICAgICAgPGJ1dHRvblxuICAgICAgdHlwZT1cImJ1dHRvblwiXG4gICAgICBjbGFzcz1cImJ0biBidG4tcHJpbWFyeSBkcm9wZG93biBzdWJtaXRcIlxuICAgICAgKGNsaWNrKT1cIm9uY2xpY2soc2VsZWN0ZWQudmFsdWUsIGN1c3RvbS52YWx1ZSlcIlxuICAgICAgPlN1Ym1pdFxuICAgICAgPC9idXR0b24+XG5cbiAgICAgIDwvZGl2PlxuICAgIDwvZm9ybT5cbiAgPC9kaXY+XG4gIDxkaXYgY2xhc3M9XCJjaGFydC1jb250YWluZXIgY29sLXNtLThcIj5cbiAgICA8Y2hhcnQgI2MgW3R5cGVdPVwidHlwZVwiIFtkYXRhXT1cImRhdGFcIiBbb3B0aW9uc109XCJvcHRpb25zXCI+PC9jaGFydD5cbiAgICA8YnV0dG9uICpuZ0lmPVwiQ3JlYXRvcigpXCIgdHlwZT1cImJ1dHRvblwiIGNsYXNzPVwiYnRuIGJ0bi1kYW5nZXJcIiAoY2xpY2spPVwib25EZWxldGUoKVwiID5EZWxldGUgUG9sbDwvYnV0dG9uPlxuICA8L2Rpdj5cbjwvZGl2PlxuIiwiPGFwcC1teXBvbGxzPjwvYXBwLW15cG9sbHM+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lDUVU7Z0JBQUE7OztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7Z0JBQUE7OztNQUFBO1FBQUE7UUFB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

@@ -1,34 +1,35 @@
 <div class="poll-container row">
   <div class="options col-sm-4">
-    <div>{{poll?.title}}</div>
-<form>
-  <div>
-    <select #selected class="dropdown"   (change)="addCustom(selected.value)">
-       <option value="" disabled selected hidden>Select your option</option>
-      <option
-      *ngFor="let option of poll?.options; let i = index"
-      >{{option}}
-    </option>
-    <option>
-      Make a custom option
-    </option>
-  </select>
-  <div [hidden]="!getCustomTrue()">
-    <label for="custom" >Add your option: </label>
-    <input
-    id="custom"
-    #custom
-    >
-  </div>
-  <button
-  type="button"
-  class="btn btn-primary dropdown submit"
-  (click)="onclick(selected.value, custom.value)"
-  >Submit
-  </button>
+    <div>{{poll?.title}}
+    </div>
+    <form>
+      <div>
+        <select #selected class="dropdown"   (change)="addCustom(selected.value)">
+           <option value="" disabled selected hidden>Select your option</option>
+          <option
+          *ngFor="let option of poll?.options; let i = index"
+          >{{option}}
+        </option>
+        <option>
+          Make a custom option
+        </option>
+      </select>
+      <div [hidden]="!getCustomTrue()">
+        <label for="custom" >Add your option: </label>
+        <input
+        id="custom"
+        #custom
+        >
+      </div>
+      <button
+      type="button"
+      class="btn btn-primary dropdown submit"
+      (click)="onclick(selected.value, custom.value)"
+      >Submit
+      </button>
 
-  </div>
-</form>
+      </div>
+    </form>
   </div>
   <div class="chart-container col-sm-8">
     <chart #c [type]="type" [data]="data" [options]="options"></chart>

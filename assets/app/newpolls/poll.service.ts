@@ -18,6 +18,7 @@ export class PollService {
 
   pollisClicked = new Subject<Poll>();
   private url: string = 'https://voter-app1.herokuapp.com';
+  private url1: string = 'http://localhost:3000';
 
   clickedPoll(poll: Poll) {
     this.pollisClicked.next(poll);
