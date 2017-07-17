@@ -32,6 +32,7 @@ var PollService = (function () {
         return this.pollisClicked.asObservable();
     };
     PollService.prototype.makePoll = function (poll) {
+        var _this = this;
         var body = JSON.stringify(poll);
         var headers = new Headers({ 'Content-Type': 'application/json' });
         var token = localStorage.getItem('token')
@@ -39,7 +40,10 @@ var PollService = (function () {
             : '';
         return this.http.post(this.url + '/polls' + token, body, { headers: headers })
             .map(function (response) { return response.json().obj; })
-            .catch(function (error) { return Observable.throw(error.json()); });
+            .catch(function (error) {
+            _this.errorService.handleError(error.json());
+            return Observable.throw(error.json());
+        });
     };
     PollService.prototype.getmyPolls = function () {
         var _this = this;
@@ -57,9 +61,13 @@ var PollService = (function () {
             _this.polls = transPoll;
             return transPoll;
         })
-            .catch(function (error) { return Observable.throw(error.json()); });
+            .catch(function (error) {
+            _this.errorService.handleError(error.json());
+            return Observable.throw(error.json());
+        });
     };
     PollService.prototype.getMyPoll = function (id) {
+        var _this = this;
         var token = localStorage.getItem('token')
             ? "?token=" + localStorage.getItem('token')
             : "";
@@ -69,7 +77,10 @@ var PollService = (function () {
             var myPoll = new Poll(tempPoll.title, tempPoll.options, tempPoll.creator, tempPoll._id, tempPoll.votes);
             return myPoll;
         })
-            .catch(function (error) { return Observable.throw(error.json()); });
+            .catch(function (error) {
+            _this.errorService.handleError(error.json());
+            return Observable.throw(error.json());
+        });
     };
     PollService.prototype.addVote = function (index, poll) {
         var _this = this;

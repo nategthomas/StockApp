@@ -140,7 +140,7 @@ router.use('/', function(req, res, next) {
   jwt.verify(req.query.token, 'secret', function(err, decoded) {
     if (err) {
       return res.status(401).json({
-        title: 'An error occured',
+        title: 'You are not authorized',
         error: err
       })
     }

@@ -38,8 +38,12 @@ export class PollService {
     : '';
     return this.http.post(this.url + '/polls' + token, body, {headers: headers})
     .map((response: Response) => response.json().obj)
-    .catch((error: Response) => Observable.throw(error.json()));
+    .catch((error: Response) => {
+      this.errorService.handleError(error.json());
+      return Observable.throw(error.json());
+    })
   }
+
 
   getmyPolls() {
     var token = localStorage.getItem('token')
@@ -58,7 +62,10 @@ export class PollService {
       this.polls = transPoll;
       return transPoll;
     })
-    .catch((error: Response) => Observable.throw(error.json()));
+    .catch((error: Response) => {
+      this.errorService.handleError(error.json());
+      return Observable.throw(error.json());
+    })
   }
 
 
@@ -76,7 +83,10 @@ export class PollService {
                             tempPoll.votes)
     return myPoll;
     })
-    .catch((error: Response) => Observable.throw(error.json()));
+    .catch((error: Response) => {
+      this.errorService.handleError(error.json());
+      return Observable.throw(error.json());
+    })
   }
 
 
