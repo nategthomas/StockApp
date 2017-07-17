@@ -68,10 +68,7 @@ var PollService = (function () {
     };
     PollService.prototype.getMyPoll = function (id) {
         var _this = this;
-        var token = localStorage.getItem('token')
-            ? "?token=" + localStorage.getItem('token')
-            : "";
-        return this.http.get(this.url + '/polls/mypoll' + token + '&id=' + id)
+        return this.http.get(this.url + '/polls/mypoll?id=' + id)
             .map(function (response) {
             var tempPoll = response.json().obj;
             var myPoll = new Poll(tempPoll.title, tempPoll.options, tempPoll.creator, tempPoll._id, tempPoll.votes);

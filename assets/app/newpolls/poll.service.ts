@@ -70,10 +70,7 @@ export class PollService {
 
 
   getMyPoll(id) {
-    const token = localStorage.getItem('token')
-    ? "?token=" + localStorage.getItem('token')
-    : "";
-    return this.http.get(this.url + '/polls/mypoll' + token + '&id=' + id)
+    return this.http.get(this.url + '/polls/mypoll?id=' + id)
     .map((response: Response) => {
       var tempPoll = response.json().obj
       var myPoll = new Poll(tempPoll.title,
