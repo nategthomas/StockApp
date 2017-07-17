@@ -70,14 +70,10 @@ var MypollsComponent = (function () {
     };
     MypollsComponent.prototype.onclick = function (defaults, custom) {
         var _this = this;
-        if (custom === "") {
-            console.log('yes');
-        }
         if ((defaults !== "Make a custom option") && (defaults !== "")) {
             var index = this.poll.options.indexOf(defaults);
             this.pollService.addVote(index, this.poll)
                 .subscribe(function (vote) {
-                console.log("hey");
                 _this.poll = vote;
                 _this.data.datasets[0].data = vote.votes;
                 _this.data.labels = vote.options;
