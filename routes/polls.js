@@ -27,7 +27,12 @@ router.get('/', function(req, res) {
 
 
 router.patch('/vote', function(req, res) {
-  var decoded = jwt.decode(req.query.token);
+  var decoded = undefined;
+  if (req.query.token) {
+    var jwtdecoded = jwt.decode(req.query.token);
+    decoded = jwtdecoded.user._id
+  }
+  else {decoded = req.query.cookie}
   Poll.findById(req.body.pollid, function(err, poll) {
     if (err) {
       return res.status(500).json({
@@ -41,7 +46,7 @@ router.patch('/vote', function(req, res) {
         error: err
       })
     }
-    if (poll.voters.indexOf(decoded.user._id) !== -1) {
+    if (poll.voters.indexOf(decoded) !== -1) {
       return res.status(500).json({
         title: "User can only vote once",
         error: {message: "Only one submission"}
@@ -51,7 +56,7 @@ router.patch('/vote', function(req, res) {
     var votes = poll.votes[index];
     poll.votes[index] = votes + 1;
     poll.markModified('votes');
-    poll.voters.push(decoded.user._id);
+    poll.voters.push(decoded);
     poll.markModified('voters');
     poll.save(function(err, data) {
       if (err) {
@@ -71,7 +76,12 @@ router.patch('/vote', function(req, res) {
 
 
 router.post('/custom', function(req, res) {
-  var decoded = jwt.decode(req.query.token);
+  var decoded = undefined;
+  if (req.query.token) {
+    var jwtdecoded = jwt.decode(req.query.token);
+    decoded = jwtdecoded.user._id
+  }
+  else {decoded = req.query.cookie}
   Poll.findById(req.body.pollid, function(err, poll) {
     if (err) {
       return res.status(500).json({
@@ -85,7 +95,7 @@ router.post('/custom', function(req, res) {
         error: err
       })
     }
-    if (poll.voters.indexOf(decoded.user._id) !== -1) {
+    if (poll.voters.indexOf(decoded) !== -1) {
       return res.status(500).json({
         title: "User can only vote once",
         error: {message: "Only one submission"}
@@ -94,7 +104,7 @@ router.post('/custom', function(req, res) {
     var custom = req.query.custom;
     poll.options.push(req.query.custom);
     poll.votes.push(1);
-    poll.voters.push(decoded.user._id);
+    poll.voters.push(decoded);
     poll.markModified('options');
     poll.markModified('votes');
     poll.markModified('voters');

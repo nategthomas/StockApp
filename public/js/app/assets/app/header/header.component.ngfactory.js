@@ -10,6 +10,7 @@ import * as import2 from '@angular/router';
 import * as import3 from '@angular/common';
 import * as import4 from './header.component';
 import * as import5 from './twitter.service';
+import * as import6 from 'ngx-cookie-service/cookie-service/cookie.service';
 var styles_HeaderComponent = [import0.styles];
 export var RenderType_HeaderComponent = import1.ɵcrt({
     encapsulation: 0,
@@ -419,7 +420,8 @@ function View_HeaderComponent_Host_0(l) {
         import1.ɵdid(114688, null, 0, import4.HeaderComponent, [
             import5.TwitterService,
             import2.ActivatedRoute,
-            import3.Location
+            import3.Location,
+            import6.CookieService
         ], null, null)
     ], function (ck, v) {
         ck(v, 1, 0);

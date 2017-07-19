@@ -25,26 +25,27 @@ import * as import7 from './app-routing.module';
 import * as import8 from 'angular2-chartjs/dist/chart.module';
 import * as import9 from './header/twitter.service';
 import * as import10 from './errors/error.service';
-import * as import11 from './newpolls/poll.service';
-import * as import12 from './allpolls/allpolls.component.ngfactory';
-import * as import13 from './newpolls/newpolls.component.ngfactory';
-import * as import14 from './mypolls/mypolls.component.ngfactory';
-import * as import15 from './mypolls/allmypolls.component.ngfactory';
-import * as import16 from './app.component.ngfactory';
-import * as import17 from './allpolls/allpolls.component';
-import * as import18 from './newpolls/newpolls.component';
-import * as import19 from './mypolls/mypolls.component';
-import * as import20 from './mypolls/allmypolls.component';
+import * as import11 from 'ngx-cookie-service/cookie-service/cookie.service';
+import * as import12 from './newpolls/poll.service';
+import * as import13 from './allpolls/allpolls.component.ngfactory';
+import * as import14 from './newpolls/newpolls.component.ngfactory';
+import * as import15 from './mypolls/mypolls.component.ngfactory';
+import * as import16 from './mypolls/allmypolls.component.ngfactory';
+import * as import17 from './app.component.ngfactory';
+import * as import18 from './allpolls/allpolls.component';
+import * as import19 from './newpolls/newpolls.component';
+import * as import20 from './mypolls/mypolls.component';
+import * as import21 from './mypolls/allmypolls.component';
 var AppModuleInjector = (function (_super) {
     __extends(AppModuleInjector, _super);
     function AppModuleInjector(parent) {
         return _super.call(this, parent, [
-            import12.AllpollsComponentNgFactory,
-            import13.NewpollsComponentNgFactory,
-            import14.MypollsComponentNgFactory,
-            import15.AllmypollsComponentNgFactory,
-            import16.AppComponentNgFactory
-        ], [import16.AppComponentNgFactory]) || this;
+            import13.AllpollsComponentNgFactory,
+            import14.NewpollsComponentNgFactory,
+            import15.MypollsComponentNgFactory,
+            import16.AllmypollsComponentNgFactory,
+            import17.AppComponentNgFactory
+        ], [import17.AppComponentNgFactory]) || this;
     }
     Object.defineProperty(AppModuleInjector.prototype, "_\u0275i_28", {
         get: function () {
@@ -390,12 +391,22 @@ var AppModuleInjector = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(AppModuleInjector.prototype, "_PollService_62", {
+    Object.defineProperty(AppModuleInjector.prototype, "_CookieService_62", {
         get: function () {
-            if ((this.__PollService_62 == null)) {
-                (this.__PollService_62 = new import11.PollService(this._Http_35, this._ErrorService_61));
+            if ((this.__CookieService_62 == null)) {
+                (this.__CookieService_62 = new import11.CookieService(this.parent.get(import6.DOCUMENT)));
             }
-            return this.__PollService_62;
+            return this.__CookieService_62;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AppModuleInjector.prototype, "_PollService_63", {
+        get: function () {
+            if ((this.__PollService_63 == null)) {
+                (this.__PollService_63 = new import12.PollService(this._Http_35, this._ErrorService_61, this._CookieService_62));
+            }
+            return this.__PollService_63;
         },
         enumerable: true,
         configurable: true
@@ -430,23 +441,23 @@ var AppModuleInjector = (function (_super) {
         this._ROUTES_22 = [[
                 {
                     path: '',
-                    component: import17.AllpollsComponent
+                    component: import18.AllpollsComponent
                 },
                 {
                     path: 'newpolls',
-                    component: import18.NewpollsComponent
+                    component: import19.NewpollsComponent
                 },
                 {
                     path: 'mypolls',
-                    component: import19.MypollsComponent
+                    component: import20.MypollsComponent
                 },
                 {
                     path: 'allmypolls',
-                    component: import20.AllmypollsComponent
+                    component: import21.AllmypollsComponent
                 },
                 {
                     path: 'allpolls',
-                    component: import17.AllpollsComponent
+                    component: import18.AllpollsComponent
                 }
             ]
         ];
@@ -644,8 +655,11 @@ var AppModuleInjector = (function (_super) {
         if ((token === import10.ErrorService)) {
             return this._ErrorService_61;
         }
-        if ((token === import11.PollService)) {
-            return this._PollService_62;
+        if ((token === import11.CookieService)) {
+            return this._CookieService_62;
+        }
+        if ((token === import12.PollService)) {
+            return this._PollService_63;
         }
         return notFoundResult;
     };

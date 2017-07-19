@@ -16,10 +16,12 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Poll } from "./poll.model";
 import { ErrorService } from "../errors/error.service";
+import { CookieService } from 'ngx-cookie-service';
 var PollService = (function () {
-    function PollService(http, errorService) {
+    function PollService(http, errorService, cookieService) {
         this.http = http;
         this.errorService = errorService;
+        this.cookieService = cookieService;
         this.polls = [];
         this.pollisClicked = new Subject();
         this.url = 'https://voter-app1.herokuapp.com';
@@ -84,9 +86,10 @@ var PollService = (function () {
         var body = JSON.stringify(poll);
         var headers = new Headers({ 'Content-Type': 'application/json' });
         var token = localStorage.getItem('token')
-            ? "?token=" + localStorage.getItem('token')
+            ? "&token=" + localStorage.getItem('token')
             : "";
-        return this.http.patch(this.url + '/polls/vote' + token + '&index=' + index, body, { headers: headers })
+        var cookie = "&cookie=" + this.cookieService.get('VoterApp');
+        return this.http.patch(this.url + '/polls/vote' + '?index=' + index + token + cookie, body, { headers: headers })
             .map(function (response) {
             var tempPoll = response.json().obj;
             var myPoll = new Poll(tempPoll.title, tempPoll.options, tempPoll.creator, tempPoll._id, tempPoll.votes);
@@ -104,7 +107,8 @@ var PollService = (function () {
         var token = localStorage.getItem('token')
             ? "?token=" + localStorage.getItem('token')
             : "";
-        return this.http.post(this.url + '/polls/custom' + token + '&custom=' + custom, body, { headers: headers })
+        var cookie = "&cookie=" + this.cookieService.get('VoterApp');
+        return this.http.post(this.url + '/polls/custom' + '?custom=' + custom + token + cookie, body, { headers: headers })
             .map(function (response) {
             var tempPoll = response.json().obj;
             var myPoll = new Poll(tempPoll.title, tempPoll.options, tempPoll.creator, tempPoll._id, tempPoll.votes);
@@ -147,6 +151,6 @@ var PollService = (function () {
 }());
 PollService = __decorate([
     Injectable(),
-    __metadata("design:paramtypes", [Http, ErrorService])
+    __metadata("design:paramtypes", [Http, ErrorService, CookieService])
 ], PollService);
 export { PollService };

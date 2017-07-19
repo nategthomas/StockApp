@@ -11,10 +11,11 @@ import * as import3 from './header/header.component';
 import * as import4 from './header/twitter.service';
 import * as import5 from '@angular/router';
 import * as import6 from '@angular/common';
-import * as import7 from './errors/error.component.ngfactory';
-import * as import8 from './errors/error.component';
-import * as import9 from './errors/error.service';
-import * as import10 from './app.component';
+import * as import7 from 'ngx-cookie-service/cookie-service/cookie.service';
+import * as import8 from './errors/error.component.ngfactory';
+import * as import9 from './errors/error.component';
+import * as import10 from './errors/error.service';
+import * as import11 from './app.component';
 var styles_AppComponent = [import0.styles];
 export var RenderType_AppComponent = import1.ɵcrt({
     encapsulation: 0,
@@ -33,7 +34,8 @@ export function View_AppComponent_0(l) {
         import1.ɵdid(114688, null, 0, import3.HeaderComponent, [
             import4.TwitterService,
             import5.ActivatedRoute,
-            import6.Location
+            import6.Location,
+            import7.CookieService
         ], null, null),
         (l()(), import1.ɵted(null, ['\n  '])),
         (l()(), import1.ɵeld(0, null, null, 4, 'div', [[
@@ -55,8 +57,8 @@ export function View_AppComponent_0(l) {
         (l()(), import1.ɵted(null, ['\n  '])),
         (l()(), import1.ɵted(null, ['\n'])),
         (l()(), import1.ɵted(null, ['\n'])),
-        (l()(), import1.ɵeld(0, null, null, 1, 'app-error', [], null, null, null, import7.View_ErrorComponent_0, import7.RenderType_ErrorComponent)),
-        import1.ɵdid(114688, null, 0, import8.ErrorComponent, [import9.ErrorService], null, null),
+        (l()(), import1.ɵeld(0, null, null, 1, 'app-error', [], null, null, null, import8.View_ErrorComponent_0, import8.RenderType_ErrorComponent)),
+        import1.ɵdid(114688, null, 0, import9.ErrorComponent, [import10.ErrorService], null, null),
         (l()(), import1.ɵted(null, ['\n']))
     ], function (ck, v) {
         ck(v, 3, 0);
@@ -66,7 +68,7 @@ export function View_AppComponent_0(l) {
 function View_AppComponent_Host_0(l) {
     return import1.ɵvid(0, [
         (l()(), import1.ɵeld(0, null, null, 1, 'my-app', [], null, null, null, View_AppComponent_0, RenderType_AppComponent)),
-        import1.ɵdid(49152, null, 0, import10.AppComponent, [], null, null)
+        import1.ɵdid(49152, null, 0, import11.AppComponent, [], null, null)
     ], null, null);
 }
-export var AppComponentNgFactory = import1.ɵccf('my-app', import10.AppComponent, View_AppComponent_Host_0, {}, {}, []);
+export var AppComponentNgFactory = import1.ɵccf('my-app', import11.AppComponent, View_AppComponent_Host_0, {}, {}, []);

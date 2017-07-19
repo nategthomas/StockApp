@@ -11,18 +11,28 @@ import { Component } from '@angular/core';
 import { TwitterService } from "./twitter.service";
 import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
+import { CookieService } from 'ngx-cookie-service';
 var HeaderComponent = (function () {
-    function HeaderComponent(twitterService, activatedRoute, location) {
+    function HeaderComponent(twitterService, activatedRoute, location, cookieService) {
         this.twitterService = twitterService;
         this.activatedRoute = activatedRoute;
         this.location = location;
+        this.cookieService = cookieService;
         this.isCollapsed = true;
+        this.cookieValue = 'unknown';
     }
     HeaderComponent.prototype.toggleCollapse = function () {
         this.isCollapsed = !this.isCollapsed;
     };
     HeaderComponent.prototype.ngOnInit = function () {
         var _this = this;
+        if (this.cookieService.get('VoterApp') === "") {
+            var now = new Date();
+            var time = now.getTime();
+            var expireTime = time + 1000 * 36000;
+            var uuid = new Date().getTime().toString();
+            this.cookieService.set('VoterApp', uuid, expireTime);
+        }
         this.activatedRoute.queryParams.subscribe(function (params) {
             if (params['valid']) {
                 var user = params['valid'];
@@ -57,6 +67,7 @@ HeaderComponent = __decorate([
         templateUrl: './header.component.html',
         styleUrls: ['./header.component.css']
     }),
-    __metadata("design:paramtypes", [TwitterService, ActivatedRoute, Location])
+    __metadata("design:paramtypes", [TwitterService,
+        ActivatedRoute, Location, CookieService])
 ], HeaderComponent);
 export { HeaderComponent };

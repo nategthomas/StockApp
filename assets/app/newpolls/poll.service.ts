@@ -9,12 +9,13 @@ import {Params} from "@angular/router";
 
 import {Poll} from "./poll.model";
 import {ErrorService} from "../errors/error.service";
+import {CookieService} from 'ngx-cookie-service';
 
 @Injectable()
 export class PollService {
   private polls: Poll[] = [];
 
-  constructor(private http: Http, private errorService: ErrorService) {}
+  constructor(private http: Http, private errorService: ErrorService, private cookieService: CookieService) {}
 
   pollisClicked = new Subject<Poll>();
   private url: string = 'https://voter-app1.herokuapp.com';
@@ -91,9 +92,10 @@ export class PollService {
     const body = JSON.stringify(poll);
     const headers = new Headers({'Content-Type': 'application/json'});
     const token = localStorage.getItem('token')
-    ? "?token=" + localStorage.getItem('token')
+    ? "&token=" + localStorage.getItem('token')
     : "";
-    return this.http.patch(this.url + '/polls/vote' + token + '&index=' + index, body, {headers: headers})
+    const cookie = "&cookie=" + this.cookieService.get('VoterApp');
+    return this.http.patch(this.url + '/polls/vote' + '?index=' + index + token + cookie, body, {headers: headers})
     .map((response: Response) => {
       var tempPoll = response.json().obj
       var myPoll = new Poll(tempPoll.title,
@@ -115,7 +117,8 @@ export class PollService {
     const token = localStorage.getItem('token')
     ? "?token=" + localStorage.getItem('token')
     : "";
-    return this.http.post(this.url + '/polls/custom' + token + '&custom=' + custom, body, {headers: headers})
+    const cookie = "&cookie=" + this.cookieService.get('VoterApp');
+    return this.http.post(this.url + '/polls/custom' + '?custom=' + custom + token + cookie, body, {headers: headers})
     .map((response: Response) => {
       var tempPoll = response.json().obj
       var myPoll = new Poll(tempPoll.title,

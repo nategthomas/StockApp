@@ -9,6 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ChartModule } from 'angular2-chartjs';
+import { CookieService } from 'ngx-cookie-service';
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
 import { AppRoutingModule } from "./app-routing.module";
@@ -49,7 +50,8 @@ AppModule = __decorate([
         providers: [
             TwitterService,
             PollService,
-            ErrorService
+            ErrorService,
+            CookieService
         ],
         bootstrap: [AppComponent]
     })

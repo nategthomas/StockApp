@@ -17,16 +17,17 @@ import * as import7 from './app-routing.module';
 import * as import8 from 'angular2-chartjs/dist/chart.module';
 import * as import9 from './header/twitter.service';
 import * as import10 from './errors/error.service';
-import * as import11 from './newpolls/poll.service';
-import * as import12 from './allpolls/allpolls.component.ngfactory';
-import * as import13 from './newpolls/newpolls.component.ngfactory';
-import * as import14 from './mypolls/mypolls.component.ngfactory';
-import * as import15 from './mypolls/allmypolls.component.ngfactory';
-import * as import16 from './app.component.ngfactory';
-import * as import17 from './allpolls/allpolls.component';
-import * as import18 from './newpolls/newpolls.component';
-import * as import19 from './mypolls/mypolls.component';
-import * as import20 from './mypolls/allmypolls.component';
+import * as import11 from 'ngx-cookie-service/cookie-service/cookie.service';
+import * as import12 from './newpolls/poll.service';
+import * as import13 from './allpolls/allpolls.component.ngfactory';
+import * as import14 from './newpolls/newpolls.component.ngfactory';
+import * as import15 from './mypolls/mypolls.component.ngfactory';
+import * as import16 from './mypolls/allmypolls.component.ngfactory';
+import * as import17 from './app.component.ngfactory';
+import * as import18 from './allpolls/allpolls.component';
+import * as import19 from './newpolls/newpolls.component';
+import * as import20 from './mypolls/mypolls.component';
+import * as import21 from './mypolls/allmypolls.component';
 class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
   _ɵba_0:import2.ɵba;
   _FormsModule_1:import2.FormsModule;
@@ -90,16 +91,17 @@ class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
   __APP_BOOTSTRAP_LISTENER_59:any[];
   __TwitterService_60:import9.TwitterService;
   __ErrorService_61:import10.ErrorService;
-  __PollService_62:import11.PollService;
+  __CookieService_62:import11.CookieService;
+  __PollService_63:import12.PollService;
   constructor(parent:import0.Injector) {
     super(parent,[
-      import12.AllpollsComponentNgFactory,
-      import13.NewpollsComponentNgFactory,
-      import14.MypollsComponentNgFactory,
-      import15.AllmypollsComponentNgFactory,
-      import16.AppComponentNgFactory
+      import13.AllpollsComponentNgFactory,
+      import14.NewpollsComponentNgFactory,
+      import15.MypollsComponentNgFactory,
+      import16.AllmypollsComponentNgFactory,
+      import17.AppComponentNgFactory
     ]
-    ,[import16.AppComponentNgFactory]);
+    ,[import17.AppComponentNgFactory]);
   }
   get _ɵi_28():import2.ɵi {
     if ((this.__ɵi_28 == null)) { (this.__ɵi_28 = new import2.ɵi()); }
@@ -242,9 +244,13 @@ class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
     if ((this.__ErrorService_61 == null)) { (this.__ErrorService_61 = new import10.ErrorService()); }
     return this.__ErrorService_61;
   }
-  get _PollService_62():import11.PollService {
-    if ((this.__PollService_62 == null)) { (this.__PollService_62 = new import11.PollService(this._Http_35,this._ErrorService_61)); }
-    return this.__PollService_62;
+  get _CookieService_62():import11.CookieService {
+    if ((this.__CookieService_62 == null)) { (this.__CookieService_62 = new import11.CookieService(this.parent.get(import6.DOCUMENT))); }
+    return this.__CookieService_62;
+  }
+  get _PollService_63():import12.PollService {
+    if ((this.__PollService_63 == null)) { (this.__PollService_63 = new import12.PollService(this._Http_35,this._ErrorService_61,this._CookieService_62)); }
+    return this.__PollService_63;
   }
   createInternal():import1.AppModule {
     this._ɵba_0 = new import2.ɵba();
@@ -277,27 +283,27 @@ class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
       this._ROUTES_22 = [[
         {
           path: '',
-          component: import17.AllpollsComponent
+          component: import18.AllpollsComponent
         }
         ,
         {
           path: 'newpolls',
-          component: import18.NewpollsComponent
+          component: import19.NewpollsComponent
         }
         ,
         {
           path: 'mypolls',
-          component: import19.MypollsComponent
+          component: import20.MypollsComponent
         }
         ,
         {
           path: 'allmypolls',
-          component: import20.AllmypollsComponent
+          component: import21.AllmypollsComponent
         }
         ,
         {
           path: 'allpolls',
-          component: import17.AllpollsComponent
+          component: import18.AllpollsComponent
         }
 
       ]
@@ -372,7 +378,8 @@ class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
     if ((token === import0.APP_BOOTSTRAP_LISTENER)) { return this._APP_BOOTSTRAP_LISTENER_59; }
     if ((token === import9.TwitterService)) { return this._TwitterService_60; }
     if ((token === import10.ErrorService)) { return this._ErrorService_61; }
-    if ((token === import11.PollService)) { return this._PollService_62; }
+    if ((token === import11.CookieService)) { return this._CookieService_62; }
+    if ((token === import12.PollService)) { return this._PollService_63; }
     return notFoundResult;
   }
   destroyInternal():void {
@@ -382,4 +389,4 @@ class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
   }
 }
 export const AppModuleNgFactory:import0.NgModuleFactory<import1.AppModule> = new import0.NgModuleFactory<any>(AppModuleInjector,import1.AppModule);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2FwcC5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2FwcC5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvbmd0aG8vRG9jdW1lbnRzL0phdmFTY3JpcHQvVm90aW5nX2FwcC9hc3NldHMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
