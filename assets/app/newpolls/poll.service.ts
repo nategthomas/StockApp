@@ -115,7 +115,7 @@ export class PollService {
     const body = JSON.stringify(poll);
     const headers = new Headers({'Content-Type': 'application/json'});
     const token = localStorage.getItem('token')
-    ? "?token=" + localStorage.getItem('token')
+    ? "&token=" + localStorage.getItem('token')
     : "";
     const cookie = "&cookie=" + this.cookieService.get('VoterApp');
     return this.http.post(this.url + '/polls/custom' + '?custom=' + custom + token + cookie, body, {headers: headers})
