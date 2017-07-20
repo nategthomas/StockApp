@@ -105,7 +105,7 @@ var PollService = (function () {
         var body = JSON.stringify(poll);
         var headers = new Headers({ 'Content-Type': 'application/json' });
         var token = localStorage.getItem('token')
-            ? "?token=" + localStorage.getItem('token')
+            ? "&token=" + localStorage.getItem('token')
             : "";
         var cookie = "&cookie=" + this.cookieService.get('VoterApp');
         return this.http.post(this.url + '/polls/custom' + '?custom=' + custom + token + cookie, body, { headers: headers })

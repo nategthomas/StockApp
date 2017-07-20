@@ -73,7 +73,7 @@ router.patch('/vote', function(req, res) {
 
   })
 })
-
+nn
 
 router.post('/custom', function(req, res) {
   var decoded = undefined;
