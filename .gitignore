@@ -1,1 +1,6 @@
 debug
+public
+bin
+models
+.git
+node_modules
