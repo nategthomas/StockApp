@@ -4,3 +4,4 @@ bin
 models
 .git
 node_modules
+.env
